@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 // Components
 import Header from "./containers/Header/Header";
-import Homepage from "./containers/Homepage/Hompage";
+import Home from "./containers/Home/Home";
 import Shop from "./containers/Shop/Shop";
 import Contact from "./containers/Contact/Contact";
 import Footer from "./containers/Footer/Footer";
@@ -15,7 +15,7 @@ const App = () => {
       <GlobalStyle />
       <Header />
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
