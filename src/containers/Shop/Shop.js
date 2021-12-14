@@ -1,5 +1,5 @@
 const Shop = () => {
-  return <h1>Shop</h1>;
+  return <main>Shop</main>;
 };
 
 export default Shop;
