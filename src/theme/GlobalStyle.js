@@ -8,6 +8,14 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     color: #202020;
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+  }
 `;
 
 export default GlobalStyle;

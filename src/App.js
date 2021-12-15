@@ -14,8 +14,7 @@ import GlobalStyle from "./theme/GlobalStyle";
 // Styles
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr 100px;
+  grid-template-rows: 10% 1fr 10%;
   min-height: 100vh;
 `;
 
