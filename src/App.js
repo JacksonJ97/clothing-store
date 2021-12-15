@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import styled from "styled-components";
 
 // Components
 import Header from "./containers/Header/Header";
@@ -10,9 +11,17 @@ import Footer from "./containers/Footer/Footer";
 // Global Styles
 import GlobalStyle from "./theme/GlobalStyle";
 
+// Styles
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 100px;
+  min-height: 100vh;
+`;
+
 const App = () => {
   return (
-    <>
+    <Wrapper>
       <GlobalStyle />
       <Header />
       <Routes>
@@ -21,7 +30,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
-    </>
+    </Wrapper>
   );
 };
 
