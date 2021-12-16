@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 // Components
@@ -48,20 +49,34 @@ const Wrapper = styled.main`
 `;
 
 const Shop = () => {
+  const [clickedProductFilter, setClickedProductFilter] = useState(productData.hoodies);
+
+  const handleClick = (e) => {
+    setClickedProductFilter(productData[e.target.id]);
+  };
+
   return (
     <Wrapper>
       <div className="breadcrumb">Home {">>"} Catalog</div>
       <h2 className="products-title">Products</h2>
       <div className="product-filter">
-        <h3>Hoodies</h3>
-        <h3>Cardigans {"&"} Sweaters</h3>
-        <h3>Jeans</h3>
-        <h3>Jackets {"&"} Coats</h3>
+        <h3 id="hoodies" onClick={handleClick}>
+          Hoodies
+        </h3>
+        <h3 id="cardigans" onClick={handleClick}>
+          Cardigans {"&"} Sweaters
+        </h3>
+        <h3 id="jeans" onClick={handleClick}>
+          Jeans
+        </h3>
+        <h3 id="jackets" onClick={handleClick}>
+          Jackets {"&"} Coats
+        </h3>
       </div>
       <div className="price-sort">Price Sort Menu</div>
       <div className="product-card-grid">
-        {productData.hoodies.map((item) => (
-          <ProductCard name={item.name} price={item.price} img={item.img} />
+        {clickedProductFilter.map((item, index) => (
+          <ProductCard name={item.name} price={item.price} img={item.img} key={index} />
         ))}
       </div>
     </Wrapper>
