@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { IoBagOutline } from "react-icons/io5";
-import hoodieImg from "../../assets/images/hoodie.png";
+// import hoodieImg from "../../assets/images/hoodie.png";
 
 // Styles
 const Wrapper = styled.div`
@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   }
 
   .product-details {
-    padding: 0.75em;
+    padding: 1em;
   }
 
   .product-name {
@@ -40,18 +40,18 @@ const Wrapper = styled.div`
   }
 `;
 
-const ProductCard = () => {
+const ProductCard = ({ img, name, price }) => {
   return (
     <Wrapper>
       <div className="image-container">
-        <img src={hoodieImg} alt="Hoodie" />
+        <img src={img} alt={name} />
       </div>
 
       <div className="product-details">
-        <p className="product-name">Hoodie</p>
+        <p className="product-name">{name}</p>
 
         <div className="wrapper">
-          <p>$20</p>
+          <p>{price}</p>
           <div className="shopping-cart">
             <IoBagOutline />
           </div>
