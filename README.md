@@ -7,6 +7,8 @@
 - React
 - Styled Components
 - React Router
+- React Icons
+- Lodash
 
 ### What I learned
 

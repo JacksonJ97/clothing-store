@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { IoBagOutline } from "react-icons/io5";
-// import hoodieImg from "../../assets/images/hoodie.png";
+import { Link } from "react-router-dom";
 
 // Styles
 const Wrapper = styled.div`
@@ -52,9 +52,9 @@ const ProductCard = ({ img, name, price }) => {
 
         <div className="wrapper">
           <p>{price}</p>
-          <div className="shopping-cart">
+          <Link to={`/shop/${name}`} className="shopping-cart">
             <IoBagOutline />
-          </div>
+          </Link>
         </div>
       </div>
     </Wrapper>

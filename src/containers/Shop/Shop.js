@@ -54,7 +54,6 @@ const Shop = () => {
   const handleClick = (e) => {
     setClickedProductFilter(productData[e.target.id]);
   };
-
   return (
     <Wrapper>
       <div className="breadcrumb">Home {">>"} Catalog</div>
@@ -75,8 +74,8 @@ const Shop = () => {
       </div>
       <div className="price-sort">Price Sort Menu</div>
       <div className="product-card-grid">
-        {clickedProductFilter.map((item, index) => (
-          <ProductCard name={item.name} price={item.price} img={item.img} key={index} />
+        {clickedProductFilter.map((item) => (
+          <ProductCard name={item.name} price={item.price} img={item.img} key={item.id} />
         ))}
       </div>
     </Wrapper>
