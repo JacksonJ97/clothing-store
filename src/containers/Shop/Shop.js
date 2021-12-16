@@ -75,7 +75,7 @@ const Shop = () => {
       <div className="price-sort">Price Sort Menu</div>
       <div className="product-card-grid">
         {clickedProductFilter.map((item) => (
-          <ProductCard name={item.name} price={item.price} img={item.img} key={item.id} />
+          <ProductCard id={item.id} name={item.name} price={item.price} img={item.img} key={item.id} />
         ))}
       </div>
     </Wrapper>

@@ -25,34 +25,44 @@ const Wrapper = styled.div`
   }
 
   .product-name {
+    display: inline;
     font-size: 1.25rem;
     margin-bottom: 0.25em;
+    border-bottom: 1px solid transparent;
+  }
+
+  .product-name:hover {
+    border-bottom: 1px solid #202020;
   }
 
   .wrapper {
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 
   .shopping-cart {
     font-size: 1.25rem;
-    cursor: pointer;
   }
 `;
 
-const ProductCard = ({ img, name, price }) => {
+const ProductCard = ({ img, name, price, id }) => {
   return (
     <Wrapper>
-      <div className="image-container">
-        <img src={img} alt={name} />
-      </div>
+      <Link to={`/shop/${id}`}>
+        <div className="image-container">
+          <img src={img} alt={name} />
+        </div>
+      </Link>
 
       <div className="product-details">
-        <p className="product-name">{name}</p>
+        <Link to={`/shop/${id}`}>
+          <p className="product-name">{name}</p>
+        </Link>
 
         <div className="wrapper">
           <p>{price}</p>
-          <Link to={`/shop/${name}`} className="shopping-cart">
+          <Link to={`/shop/${id}`} className="shopping-cart">
             <IoBagOutline />
           </Link>
         </div>
