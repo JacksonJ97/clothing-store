@@ -1,23 +1,29 @@
 import styled from "styled-components";
 
+// Components
+import ProductCard from "../../components/ProductCard/ProductCard";
+
 // Styles
 const Wrapper = styled.main`
   display: grid;
-  grid-template-columns: 20% repeat(2, 1fr);
+  grid-template-columns: 15% repeat(2, 1fr);
   grid-template-rows: 50px 50px 1fr;
-  padding: 0 5%;
+  padding: 2em 5%;
 
   .breadcrumb {
     grid-column: 1 / 4;
-    grid-row: 1 / 2;
+  }
+
+  .products-title {
+    grid-row: 2 / 3;
   }
 
   .product-filter {
-    grid-column: 1 / 2;
-    grid-row: 2 / 4;
+    grid-row: 3 / 4;
 
-    div {
-      margin-bottom: 2em;
+    h3 {
+      font-weight: 400;
+      margin-bottom: 1em;
     }
   }
 
@@ -31,8 +37,9 @@ const Wrapper = styled.main`
     grid-row: 3 / 4;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-items: center;
+    gap: 24px;
   }
 `;
 
@@ -40,21 +47,23 @@ const Shop = () => {
   return (
     <Wrapper>
       <div className="breadcrumb">Home {">>"} Catalog</div>
+      <h2 className="products-title">Products</h2>
       <div className="product-filter">
-        <div>Hoodies</div>
-        <div>Jackets {"&"} Coats</div>
-        <div>Pants</div>
-        <div>Jeans</div>
-        <div>Cardigans {"&"} Sweaters</div>
+        <h3>Jackets {"&"} Coats</h3>
+        <h3>Pants</h3>
+        <h3>Jeans</h3>
+        <h3>Cardigans {"&"} Sweaters</h3>
       </div>
       <div className="price-sort">Price Sort Menu</div>
       <div className="product-card-grid">
-        <div>Product Card</div>
-        <div>Product Card</div>
-        <div>Product Card</div>
-        <div>Product Card</div>
-        <div>Product Card</div>
-        <div>Product Card</div>
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
       </div>
     </Wrapper>
   );
