@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Header from "./containers/Header/Header";
 import Home from "./containers/Home/Home";
 import Shop from "./containers/Shop/Shop";
+import ProductDetail from "./containers/ProductDetail/ProductDetail";
 import Contact from "./containers/Contact/Contact";
 
 // Global Styles
@@ -25,7 +26,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/shop/:productId" element={<div>Product Detail Page</div>} />
+        <Route path="/shop/:productId" element={<ProductDetail />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Wrapper>
