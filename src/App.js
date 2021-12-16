@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Header from "./containers/Header/Header";
 import Home from "./containers/Home/Home";
 import Shop from "./containers/Shop/Shop";
+import ProductDetail from "./containers/ProductDetail/ProductDetail";
 import ProductCardGrid from "./components/ProductCardGrid/ProductCardGrid";
 import Contact from "./containers/Contact/Contact";
 
@@ -29,6 +30,7 @@ const App = () => {
           <Route index element={<ProductCardGrid />} />
           <Route path=":filter" element={<ProductCardGrid />} />
         </Route>
+        <Route path="/shop/:filter/:productId" element={<ProductDetail />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Wrapper>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { IoBagOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { IoBagOutline } from "react-icons/io5";
 
 // Styles
 const Wrapper = styled.div`
@@ -46,23 +46,23 @@ const Wrapper = styled.div`
   }
 `;
 
-const ProductCard = ({ img, name, price, id }) => {
+const ProductCard = ({ img, name, price, id, path }) => {
   return (
     <Wrapper>
-      <Link to={`/shop/${id}`}>
+      <Link to={`/shop/${path}/${id}`}>
         <div className="image-container">
           <img src={img} alt={name} />
         </div>
       </Link>
 
       <div className="product-details">
-        <Link to={`/shop/${id}`}>
+        <Link to={`/shop/${path}/${id}`}>
           <p className="product-name">{name}</p>
         </Link>
 
         <div className="wrapper">
           <p>{price}</p>
-          <Link to={`/shop/${id}`} className="shopping-cart">
+          <Link to={`/shop/${path}/${id}`} className="shopping-cart">
             <IoBagOutline />
           </Link>
         </div>

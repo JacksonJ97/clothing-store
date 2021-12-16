@@ -36,7 +36,7 @@ const ProductCardGrid = () => {
   return (
     <>
       {data.map((item) => (
-        <ProductCard id={item.id} name={item.name} price={item.price} img={item.img} key={item.id} />
+        <ProductCard path={filter} id={item.id} name={item.name} price={item.price} img={item.img} key={item.id} />
       ))}
     </>
   );

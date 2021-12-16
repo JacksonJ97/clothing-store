@@ -1,9 +1,13 @@
 import { useParams } from "react-router-dom";
 
 const ProductDetail = () => {
-  const { productId } = useParams();
+  const { filter, productId } = useParams();
 
-  return <div>Product {productId}</div>;
+  return (
+    <div>
+      Product {productId} from {filter}
+    </div>
+  );
 };
 
 export default ProductDetail;
