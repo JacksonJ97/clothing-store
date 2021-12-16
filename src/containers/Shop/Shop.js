@@ -1,11 +1,5 @@
-import { useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
-
-// Components
-import ProductCard from "../../components/ProductCard/ProductCard";
-
-// Data
-import productData from "../../productData";
 
 // Styles
 const Wrapper = styled.main`
@@ -49,34 +43,27 @@ const Wrapper = styled.main`
 `;
 
 const Shop = () => {
-  const [clickedProductFilter, setClickedProductFilter] = useState(productData.hoodies);
-
-  const handleClick = (e) => {
-    setClickedProductFilter(productData[e.target.id]);
-  };
   return (
     <Wrapper>
       <div className="breadcrumb">Home {">>"} Catalog</div>
       <h2 className="products-title">Products</h2>
       <div className="product-filter">
-        <h3 id="hoodies" onClick={handleClick}>
-          Hoodies
-        </h3>
-        <h3 id="cardigans" onClick={handleClick}>
-          Cardigans {"&"} Sweaters
-        </h3>
-        <h3 id="jeans" onClick={handleClick}>
-          Jeans
-        </h3>
-        <h3 id="jackets" onClick={handleClick}>
-          Jackets {"&"} Coats
-        </h3>
+        <Link to="/shop/hoodies">
+          <h3>Hoodies</h3>
+        </Link>
+        <Link to="/shop/cardigans&sweaters">
+          <h3>Cardigans {"&"} Sweaters</h3>
+        </Link>
+        <Link to="/shop/jeans">
+          <h3>Jeans</h3>
+        </Link>
+        <Link to="/shop/jackets&coats">
+          <h3>Jackets {"&"} Coats</h3>
+        </Link>
       </div>
       <div className="price-sort">Price Sort Menu</div>
       <div className="product-card-grid">
-        {clickedProductFilter.map((item) => (
-          <ProductCard id={item.id} name={item.name} price={item.price} img={item.img} key={item.id} />
-        ))}
+        <Outlet />
       </div>
     </Wrapper>
   );
