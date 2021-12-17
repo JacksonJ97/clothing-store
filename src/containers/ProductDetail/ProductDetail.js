@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import hoodieImg from "../../assets/images/hoodie.png";
 
 // Components
 import Product from "../../components/Product/Product";
+
+// Data
+import productData from "../../productData";
 
 // Styles
 const Wrapper = styled.main`
@@ -14,14 +16,22 @@ const Wrapper = styled.main`
 
 const ProductDetail = () => {
   const { filter, productId } = useParams();
+  let product = {};
+
+  if (filter === "cardigans&sweaters") {
+    product = productData.cardigans.find((product) => product.id === productId);
+  } else if (filter === "jackets&coats") {
+    product = productData.jackets.find((product) => product.id === productId);
+  } else {
+    product = productData[filter].find((product) => product.id === productId);
+  }
 
   return (
     <Wrapper>
       <div className="breadcrumb">
         Home {">>"} Catalog {">>"} Hoodies
       </div>
-      <Product img={hoodieImg} name="Product Name" text="Text" price="Price" />
-      {/* Product {productId} from {filter} */}
+      <Product img={product.img} name={product.name} text={product.description} price={product.price} />
     </Wrapper>
   );
 };
