@@ -8,7 +8,7 @@ import ProductCard from "../ProductCard/ProductCard";
 import productData from "../../productData";
 
 const ProductCardGrid = () => {
-  const [data, setData] = useState(productData.hoodies);
+  const [data, setData] = useState([]);
   const [path, setPath] = useState("");
 
   const { filter } = useParams();
@@ -17,12 +17,6 @@ const ProductCardGrid = () => {
     if (!filter) {
       setData(productData.hoodies);
       setPath("hoodies");
-    } else if (filter === "cardigans&sweaters") {
-      setData(productData.cardigans);
-      setPath(filter);
-    } else if (filter === "jackets&coats") {
-      setData(productData.jackets);
-      setPath(filter);
     } else {
       setData(productData[filter]);
       setPath(filter);

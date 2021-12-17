@@ -53,7 +53,7 @@ const productData = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat tempus laoreet. Suspendisse dignissim odio ac nisi consequat lacinia. Fusce posuere a augue sed venenatis.",
     },
   ],
-  cardigans: [
+  "cardigans&sweaters": [
     {
       id: uniqueId("2"),
       img: greyHoodieImg,
@@ -153,7 +153,7 @@ const productData = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat tempus laoreet. Suspendisse dignissim odio ac nisi consequat lacinia. Fusce posuere a augue sed venenatis.",
     },
   ],
-  jackets: [
+  "jackets&coats": [
     {
       id: uniqueId("4"),
       img: greyHoodieImg,

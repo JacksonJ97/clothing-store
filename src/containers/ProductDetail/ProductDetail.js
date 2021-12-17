@@ -16,15 +16,7 @@ const Wrapper = styled.main`
 
 const ProductDetail = () => {
   const { filter, productId } = useParams();
-  let product = {};
-
-  if (filter === "cardigans&sweaters") {
-    product = productData.cardigans.find((product) => product.id === productId);
-  } else if (filter === "jackets&coats") {
-    product = productData.jackets.find((product) => product.id === productId);
-  } else {
-    product = productData[filter].find((product) => product.id === productId);
-  }
+  const product = productData[filter].find((product) => product.id === productId);
 
   return (
     <Wrapper>
