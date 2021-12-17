@@ -17,25 +17,14 @@ const ProductCardGrid = () => {
     if (!filter) {
       setData(productData.hoodies);
       setPath("hoodies");
-    }
-
-    if (filter === "hoodies") {
-      setData(productData.hoodies);
-      setPath(filter);
-    }
-
-    if (filter === "cardigans&sweaters") {
+    } else if (filter === "cardigans&sweaters") {
       setData(productData.cardigans);
       setPath(filter);
-    }
-
-    if (filter === "jeans") {
-      setData(productData.jeans);
-      setPath(filter);
-    }
-
-    if (filter === "jackets&coats") {
+    } else if (filter === "jackets&coats") {
       setData(productData.jackets);
+      setPath(filter);
+    } else {
+      setData(productData[filter]);
       setPath(filter);
     }
   }, [filter]);
