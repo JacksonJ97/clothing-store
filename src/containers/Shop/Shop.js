@@ -8,10 +8,6 @@ const Wrapper = styled.main`
   grid-template-rows: 50px 50px 1fr;
   padding: 2em 5%;
 
-  .active {
-    border-bottom: 1px solid #202020;
-  }
-
   .breadcrumb {
     grid-column: 1 / 4;
   }
