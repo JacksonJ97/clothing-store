@@ -5,7 +5,8 @@ const Wrapper = styled.div`
   text-align: center;
 
   img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px;
     height: auto;
   }
 
@@ -28,7 +29,8 @@ const Wrapper = styled.div`
     text-align: left;
 
     img {
-      max-width: 60%;
+      width: 60%;
+      max-width: 500px;
     }
 
     .details {

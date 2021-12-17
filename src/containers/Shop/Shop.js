@@ -30,7 +30,7 @@ const Wrapper = styled.main`
     grid-row: 3 / 4;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     place-items: center;
     gap: 24px;
   }
