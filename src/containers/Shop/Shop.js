@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet, NavLink, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 // Styles
@@ -7,6 +7,10 @@ const Wrapper = styled.main`
   grid-template-columns: 15% repeat(2, 1fr);
   grid-template-rows: 50px 50px 1fr;
   padding: 2em 5%;
+
+  .active {
+    border-bottom: 1px solid #202020;
+  }
 
   .breadcrumb {
     grid-column: 1 / 4;
@@ -18,12 +22,6 @@ const Wrapper = styled.main`
 
   .product-category {
     grid-row: 3 / 4;
-  }
-
-  h3 {
-    font-weight: 400;
-    margin-bottom: 1em;
-    cursor: pointer;
   }
 
   .price-sort {
@@ -43,24 +41,45 @@ const Wrapper = styled.main`
 `;
 
 const Shop = () => {
+  const activeStyle = { borderBottom: "1px solid #202020" };
+  const { pathname } = useLocation();
+
   return (
     <Wrapper>
       <div className="breadcrumb">Home {">>"} Catalog</div>
       <h2 className="products-title">Products</h2>
       <div className="product-category">
         <ul>
-          <Link to="/shop/hoodies">
-            <li>Hoodies</li>
-          </Link>
-          <Link to="/shop/cardigans&sweaters">
-            <li>Cardigans {"&"} Sweaters</li>
-          </Link>
-          <Link to="/shop/jeans">
-            <li>Jeans</li>
-          </Link>
-          <Link to="/shop/jackets&coats">
-            <li>Jackets {"&"} Coats</li>
-          </Link>
+          <li>
+            <NavLink
+              style={({ isActive }) => {
+                if (pathname === "/shop") {
+                  isActive = true;
+                }
+                return isActive ? activeStyle : undefined;
+              }}
+              to="/shop/hoodies"
+              id="hoodie-link">
+              Hoodies
+            </NavLink>
+          </li>
+          <li>
+            <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/shop/cardigans&sweaters">
+              Cardigans {"&"} Sweaters
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/shop/jeans">
+              Jeans
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/shop/jackets&coats">
+              Jackets {"&"} Coats
+            </NavLink>
+          </li>
         </ul>
       </div>
       <div className="price-sort">Price Sort Menu</div>

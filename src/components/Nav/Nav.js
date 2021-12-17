@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 // Styles
@@ -13,17 +13,24 @@ const Wrapper = styled.nav`
 `;
 
 const Nav = () => {
+  const activeStyle = { borderBottom: "1px solid #202020" };
   return (
     <Wrapper>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/">
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/shop">Catalog</Link>
+          <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/shop">
+            Catalog
+          </NavLink>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/contact">
+            Contact
+          </NavLink>
         </li>
       </ul>
     </Wrapper>
