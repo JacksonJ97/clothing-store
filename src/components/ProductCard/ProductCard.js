@@ -16,6 +16,7 @@ const Wrapper = styled.div`
   img {
     display: block;
     width: 70%;
+    height: 80%;
     padding: 1.25em 0;
     margin: 0 auto;
   }

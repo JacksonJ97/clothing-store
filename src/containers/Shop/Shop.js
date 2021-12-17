@@ -16,7 +16,7 @@ const Wrapper = styled.main`
     grid-row: 2 / 3;
   }
 
-  .product-filter {
+  .product-category {
     grid-row: 3 / 4;
   }
 
@@ -47,19 +47,21 @@ const Shop = () => {
     <Wrapper>
       <div className="breadcrumb">Home {">>"} Catalog</div>
       <h2 className="products-title">Products</h2>
-      <div className="product-filter">
-        <Link to="/shop/hoodies">
-          <h3>Hoodies</h3>
-        </Link>
-        <Link to="/shop/cardigans&sweaters">
-          <h3>Cardigans {"&"} Sweaters</h3>
-        </Link>
-        <Link to="/shop/jeans">
-          <h3>Jeans</h3>
-        </Link>
-        <Link to="/shop/jackets&coats">
-          <h3>Jackets {"&"} Coats</h3>
-        </Link>
+      <div className="product-category">
+        <ul>
+          <Link to="/shop/hoodies">
+            <li>Hoodies</li>
+          </Link>
+          <Link to="/shop/cardigans&sweaters">
+            <li>Cardigans {"&"} Sweaters</li>
+          </Link>
+          <Link to="/shop/jeans">
+            <li>Jeans</li>
+          </Link>
+          <Link to="/shop/jackets&coats">
+            <li>Jackets {"&"} Coats</li>
+          </Link>
+        </ul>
       </div>
       <div className="price-sort">Price Sort Menu</div>
       <div className="product-card-grid">
