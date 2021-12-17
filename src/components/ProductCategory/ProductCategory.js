@@ -4,7 +4,16 @@ import styled from "styled-components";
 // Styles
 const List = styled.ul`
   a {
+    display: block;
     color: #8a8a8a;
+  }
+
+  a:hover {
+    color: #202020;
+  }
+
+  li {
+    margin-bottom: 1em;
   }
 `;
 
