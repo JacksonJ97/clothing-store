@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 
 // Components
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import ProductCategory from "../../components/ProductCategory/ProductCategory";
 
 // Styles
@@ -42,7 +43,9 @@ const Wrapper = styled.main`
 const Shop = () => {
   return (
     <Wrapper>
-      <div className="breadcrumb">Home {">>"} Catalog</div>
+      <div className="breadcrumb">
+        <Breadcrumb className="breadcrumb" />
+      </div>
       <h2 className="products-title">Products</h2>
       <div className="product-category">
         <ProductCategory />

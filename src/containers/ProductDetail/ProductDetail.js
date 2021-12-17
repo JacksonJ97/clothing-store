@@ -3,6 +3,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import styled from "styled-components";
 
 // Components
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import Product from "../../components/Product/Product";
 
 // Data
@@ -28,7 +29,7 @@ const ProductDetail = () => {
   return (
     <Wrapper>
       <div className="breadcrumb">
-        Home {">>"} Catalog {">>"} Hoodies
+        <Breadcrumb />
       </div>
       <FaArrowLeft onClick={() => navigate(-1)} className="back-button" />
       <Product img={product.img} name={product.name} text={product.description} price={product.price} />
