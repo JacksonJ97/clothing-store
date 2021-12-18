@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+// Components
+import AddToCart from "../AddToCart/AddToCart";
+
 // Styles
 const Wrapper = styled.div`
   text-align: center;
@@ -36,7 +39,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Product = ({ name, price, img, text }) => {
+const Product = ({ name, price, img, text, setCartItemCount }) => {
   return (
     <Wrapper>
       <img src={img} alt={name} />
@@ -44,7 +47,7 @@ const Product = ({ name, price, img, text }) => {
         <h1>{name}</h1>
         <p>{price}</p>
         <p>{text}</p>
-        <button>Add to cart</button>
+        <AddToCart setCartItemCount={setCartItemCount} />
       </div>
     </Wrapper>
   );

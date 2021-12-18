@@ -13,19 +13,27 @@ const Wrapper = styled.header`
   position: relative;
 
   .shopping-cart-icon {
+    display: flex;
+    align-items: center;
     font-size: 1.25rem;
+    background: none;
+    border: none;
     cursor: pointer;
+    p {
+      font-size: 0.875rem;
+      margin-left: 0.25em;
+    }
   }
 `;
 
-const Header = ({ setShowCart }) => {
+const Header = ({ cartItemCount, setShowCart }) => {
   return (
     <Wrapper>
       <div>Logo</div>
       <Nav />
-      <div className="shopping-cart-icon" onClick={() => setShowCart((prevState) => !prevState)}>
-        <IoBagOutline />
-      </div>
+      <button className="shopping-cart-icon" onClick={() => setShowCart((prevState) => !prevState)}>
+        <IoBagOutline /> <p>( {cartItemCount} )</p>
+      </button>
     </Wrapper>
   );
 };

@@ -22,12 +22,13 @@ const Wrapper = styled.div`
 `;
 
 const App = () => {
+  const [cartItemCount, setCartItemCount] = useState(0);
   const [showCart, setShowCart] = useState(false);
 
   return (
     <Wrapper>
       <GlobalStyle />
-      <Header setShowCart={setShowCart} />
+      <Header cartItemCount={cartItemCount} setShowCart={setShowCart} />
       <ShoppingCart showCart={showCart} setShowCart={setShowCart} />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -35,7 +36,7 @@ const App = () => {
           <Route index element={<ProductCardGrid />} />
           <Route path=":filter" element={<ProductCardGrid />} />
         </Route>
-        <Route path="/shop/:filter/:productId" element={<ProductDetail />} />
+        <Route path="/shop/:filter/:productId" element={<ProductDetail setCartItemCount={setCartItemCount} />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Wrapper>
