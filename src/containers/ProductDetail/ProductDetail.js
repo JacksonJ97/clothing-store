@@ -28,7 +28,7 @@ const ProductDetail = () => {
 
   return (
     <Wrapper>
-      <div className="breadcrumb">
+      <div>
         <Breadcrumb />
       </div>
       <FaArrowLeft onClick={() => navigate(-1)} className="back-button" />

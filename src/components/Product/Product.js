@@ -14,11 +14,6 @@ const Wrapper = styled.div`
     margin-top: 2em;
   }
 
-  .quantity {
-    display: flex;
-    justify-content: center;
-  }
-
   @media (min-width: 1060px) {
     display: flex;
     align-items: center;
@@ -38,10 +33,6 @@ const Wrapper = styled.div`
       align-self: flex-start;
       margin: 10em 0 0;
     }
-
-    .quantity {
-      justify-content: flex-start;
-    }
   }
 `;
 
@@ -53,10 +44,7 @@ const Product = ({ name, price, img, text }) => {
         <h1>{name}</h1>
         <p>{price}</p>
         <p>{text}</p>
-        <div className="quantity">
-          <p>Quantity</p>
-          <button>Add to cart</button>
-        </div>
+        <button>Add to cart</button>
       </div>
     </Wrapper>
   );
