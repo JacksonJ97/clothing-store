@@ -1,10 +1,8 @@
-import { useState } from "react";
 import styled from "styled-components";
 import { IoBagOutline } from "react-icons/io5";
 
 // Components
 import Nav from "../../components/Nav/Nav";
-import ShoppingCart from "../../components/ShoppingCart/ShoppingCart";
 
 // Styles
 const Wrapper = styled.header`
@@ -20,21 +18,14 @@ const Wrapper = styled.header`
   }
 `;
 
-const Header = () => {
-  const [showCart, setShowCart] = useState(false);
-
-  const handleClick = () => {
-    setShowCart(!showCart);
-  };
-
+const Header = ({ setShowCart }) => {
   return (
     <Wrapper>
       <div>Logo</div>
       <Nav />
-      <div className="shopping-cart-icon" onClick={handleClick}>
+      <div className="shopping-cart-icon" onClick={() => setShowCart((prevState) => !prevState)}>
         <IoBagOutline />
       </div>
-      {showCart && <ShoppingCart handleClick={handleClick} />}
     </Wrapper>
   );
 };

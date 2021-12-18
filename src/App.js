@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 
 // Components
 import Header from "./containers/Header/Header";
+import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 import Home from "./containers/Home/Home";
 import Shop from "./containers/Shop/Shop";
 import ProductDetail from "./containers/ProductDetail/ProductDetail";
@@ -20,10 +22,13 @@ const Wrapper = styled.div`
 `;
 
 const App = () => {
+  const [showCart, setShowCart] = useState(false);
+
   return (
     <Wrapper>
       <GlobalStyle />
-      <Header />
+      <Header setShowCart={setShowCart} />
+      <ShoppingCart showCart={showCart} setShowCart={setShowCart} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />}>
