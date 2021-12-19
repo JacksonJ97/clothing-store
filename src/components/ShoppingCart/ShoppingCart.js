@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { CgClose } from "react-icons/cg";
 
@@ -38,12 +39,19 @@ const Cart = styled.div`
 
 const ShoppingCart = ({ cartItems, setCartItems, showCart, setShowCart }) => {
   const backgroundRef = useRef();
+  const navigate = useNavigate();
 
   const closeCart = (e) => {
     if (backgroundRef.current === e.target) {
       setShowCart(false);
     }
   };
+
+  const openCheckoutMessage = () => {
+    alert("Thank you for shopping");
+  };
+
+  const subtotal = cartItems.reduce((total, item) => item.total + total, 0);
 
   return (
     <>
@@ -59,24 +67,38 @@ const ShoppingCart = ({ cartItems, setCartItems, showCart, setShowCart }) => {
               <CgClose onClick={() => setShowCart((prevState) => !prevState)} />
             </div>
 
-            <div className="cart-items-container">
-              {cartItems.map((item) => (
-                <CartItem
-                  id={item.id}
-                  name={item.name}
-                  price={item.price}
-                  img={item.img}
-                  quantity={item.quantity}
-                  total={item.total}
-                  cartItems={cartItems}
-                  setCartItems={setCartItems}
-                  key={item.id}
-                />
-              ))}
-            </div>
-
-            <p>Subtotal: $20</p>
-            <button>Checkout</button>
+            {cartItems.length ? (
+              <>
+                <div className="cart-items-container">
+                  {cartItems.map((item) => (
+                    <CartItem
+                      id={item.id}
+                      name={item.name}
+                      price={item.price}
+                      img={item.img}
+                      quantity={item.quantity}
+                      total={item.total}
+                      cartItems={cartItems}
+                      setCartItems={setCartItems}
+                      key={item.id}
+                    />
+                  ))}
+                </div>
+                <p>Subtotal: ${subtotal}</p>
+                <button onClick={openCheckoutMessage}>Checkout</button>
+              </>
+            ) : (
+              <div>
+                <p>Your cart is empty.</p>
+                <button
+                  onClick={() => {
+                    navigate("/shop");
+                    setShowCart(false);
+                  }}>
+                  Browse Products
+                </button>
+              </div>
+            )}
           </Cart>
         </Background>
       )}
