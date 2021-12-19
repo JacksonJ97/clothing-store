@@ -21,7 +21,7 @@ const Wrapper = styled.main`
   }
 `;
 
-const ProductDetail = ({ setCartItemCount }) => {
+const ProductDetail = ({ setCartItems }) => {
   const { filter, productId } = useParams();
   const product = productData[filter].find((product) => product.id === productId);
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ const ProductDetail = ({ setCartItemCount }) => {
         <Breadcrumb />
       </div>
       <FaArrowLeft onClick={() => navigate(-1)} className="back-button" />
-      <Product img={product.img} name={product.name} text={product.description} price={product.price} setCartItemCount={setCartItemCount} />
+      <Product product={product} setCartItems={setCartItems} />
     </Wrapper>
   );
 };

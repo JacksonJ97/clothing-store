@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 
@@ -22,21 +22,25 @@ const Wrapper = styled.div`
 `;
 
 const App = () => {
-  const [cartItemCount, setCartItemCount] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
   const [showCart, setShowCart] = useState(false);
+
+  useEffect(() => {
+    console.log(cartItems);
+  }, [cartItems]);
 
   return (
     <Wrapper>
       <GlobalStyle />
-      <Header cartItemCount={cartItemCount} setShowCart={setShowCart} />
-      <ShoppingCart showCart={showCart} setShowCart={setShowCart} />
+      <Header cartItems={cartItems} setShowCart={setShowCart} />
+      <ShoppingCart cartItems={cartItems} showCart={showCart} setShowCart={setShowCart} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />}>
           <Route index element={<ProductCardGrid />} />
           <Route path=":filter" element={<ProductCardGrid />} />
         </Route>
-        <Route path="/shop/:filter/:productId" element={<ProductDetail setCartItemCount={setCartItemCount} />} />
+        <Route path="/shop/:filter/:productId" element={<ProductDetail cartItems={cartItems} setCartItems={setCartItems} />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Wrapper>

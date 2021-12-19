@@ -39,15 +39,17 @@ const Wrapper = styled.div`
   }
 `;
 
-const Product = ({ name, price, img, text, setCartItemCount }) => {
+const Product = ({ product, setCartItems }) => {
+  const item = { id: product.id, name: product.name, price: product.price, img: product.img, quantity: 0 };
+
   return (
     <Wrapper>
-      <img src={img} alt={name} />
+      <img src={product.img} alt={product.name} />
       <div className="details">
-        <h1>{name}</h1>
-        <p>{price}</p>
-        <p>{text}</p>
-        <AddToCart setCartItemCount={setCartItemCount} />
+        <h1>{product.name}</h1>
+        <p>{product.price}</p>
+        <p>{product.description}</p>
+        <AddToCart item={item} setCartItems={setCartItems} />
       </div>
     </Wrapper>
   );

@@ -2,6 +2,9 @@ import { useRef } from "react";
 import styled from "styled-components";
 import { CgClose } from "react-icons/cg";
 
+// Components
+import CartItem from "../CartItem/CartItem";
+
 // Styles
 const Background = styled.div`
   display: flex;
@@ -26,7 +29,7 @@ const Cart = styled.div`
   }
 `;
 
-const ShoppingCart = ({ showCart, setShowCart }) => {
+const ShoppingCart = ({ cartItems, showCart, setShowCart }) => {
   const backgroundRef = useRef();
 
   const closeCart = (e) => {
@@ -40,10 +43,13 @@ const ShoppingCart = ({ showCart, setShowCart }) => {
       {showCart && (
         <Background ref={backgroundRef} onClick={closeCart}>
           <Cart>
-            Shopping Cart
+            <h1>Your Shopping Cart</h1>
             <div className="close-icon">
               <CgClose onClick={() => setShowCart((prevState) => !prevState)} />
             </div>
+            {cartItems.map((item) => (
+              <CartItem name={item.name} price={item.price} img={item.img} key={item.id} />
+            ))}
             <p>Subtotal: $20</p>
             <button>Checkout</button>
           </Cart>

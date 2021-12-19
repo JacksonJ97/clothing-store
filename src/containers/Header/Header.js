@@ -26,13 +26,13 @@ const Wrapper = styled.header`
   }
 `;
 
-const Header = ({ cartItemCount, setShowCart }) => {
+const Header = ({ setShowCart }) => {
   return (
     <Wrapper>
       <div>Logo</div>
       <Nav />
       <button className="shopping-cart-icon" onClick={() => setShowCart((prevState) => !prevState)}>
-        <IoBagOutline /> <p>( {cartItemCount} )</p>
+        <IoBagOutline /> <p>( 0 )</p>
       </button>
     </Wrapper>
   );
