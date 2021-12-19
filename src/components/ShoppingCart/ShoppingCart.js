@@ -18,14 +18,21 @@ const Background = styled.div`
 const Cart = styled.div`
   background-color: white;
   border: 1px solid #202020;
-  width: 300px;
+  width: 450px;
+  padding: 2em;
 
-  .close-icon {
-    font-size: 1.25rem;
+  .shopping-cart-header {
+    display: flex;
+    justify-content: space-between;
   }
 
   svg {
+    font-size: 1.25rem;
     cursor: pointer;
+  }
+
+  .cart-items-container {
+    margin: 2em 0;
   }
 `;
 
@@ -43,13 +50,21 @@ const ShoppingCart = ({ cartItems, showCart, setShowCart }) => {
       {showCart && (
         <Background ref={backgroundRef} onClick={closeCart}>
           <Cart>
-            <h1>Your Shopping Cart</h1>
-            <div className="close-icon">
+            <div className="shopping-cart-header">
+              <h1>
+                Your <br />
+                Shopping <br />
+                Cart
+              </h1>
               <CgClose onClick={() => setShowCart((prevState) => !prevState)} />
             </div>
-            {cartItems.map((item) => (
-              <CartItem name={item.name} price={item.price} img={item.img} key={item.id} />
-            ))}
+
+            <div className="cart-items-container">
+              {cartItems.map((item) => (
+                <CartItem name={item.name} price={item.price} img={item.img} key={item.id} />
+              ))}
+            </div>
+
             <p>Subtotal: $20</p>
             <button>Checkout</button>
           </Cart>

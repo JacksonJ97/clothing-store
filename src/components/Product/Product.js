@@ -40,7 +40,7 @@ const Wrapper = styled.div`
 `;
 
 const Product = ({ product, setCartItems }) => {
-  const item = { id: product.id, name: product.name, price: product.price, img: product.img, quantity: 0 };
+  const item = { id: product.id, name: product.name, price: product.price, img: product.img, quantity: 1 };
 
   return (
     <Wrapper>

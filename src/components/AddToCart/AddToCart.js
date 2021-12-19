@@ -19,7 +19,7 @@ const AddToCart = ({ item, setCartItems }) => {
         return newCartItems;
       }
 
-      return [...prevState, { ...item, quantity: 1 }];
+      return [...prevState, item];
     });
   };
 
