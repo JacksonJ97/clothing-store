@@ -33,7 +33,7 @@ const App = () => {
     <Wrapper>
       <GlobalStyle />
       <Header cartItems={cartItems} setShowCart={setShowCart} />
-      <ShoppingCart cartItems={cartItems} showCart={showCart} setShowCart={setShowCart} />
+      <ShoppingCart cartItems={cartItems} setCartItems={setCartItems} showCart={showCart} setShowCart={setShowCart} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />}>

@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+// Components
+import QuantityControl from "../QuantityControl/QuantityControl";
+
 // Styles
 const Wrapper = styled.div`
   display: flex;
@@ -33,7 +36,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const CartItem = ({ name, img, price, quantity }) => {
+const CartItem = ({ id, name, img, price, quantity, cartItems, setCartItems }) => {
   return (
     <Wrapper>
       <img src={img} alt={name} />
@@ -44,8 +47,7 @@ const CartItem = ({ name, img, price, quantity }) => {
         </div>
         <p className="product-total">Total</p>
         <div className="quantity-container">
-          <div>Quantity</div>
-          <div>Remove Item</div>
+          <QuantityControl id={id} quantity={quantity} cartItems={cartItems} setCartItems={setCartItems} />
         </div>
       </div>
     </Wrapper>

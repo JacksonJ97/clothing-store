@@ -36,7 +36,7 @@ const Cart = styled.div`
   }
 `;
 
-const ShoppingCart = ({ cartItems, showCart, setShowCart }) => {
+const ShoppingCart = ({ cartItems, setCartItems, showCart, setShowCart }) => {
   const backgroundRef = useRef();
 
   const closeCart = (e) => {
@@ -61,7 +61,16 @@ const ShoppingCart = ({ cartItems, showCart, setShowCart }) => {
 
             <div className="cart-items-container">
               {cartItems.map((item) => (
-                <CartItem name={item.name} price={item.price} img={item.img} key={item.id} />
+                <CartItem
+                  id={item.id}
+                  name={item.name}
+                  price={item.price}
+                  img={item.img}
+                  quantity={item.quantity}
+                  cartItems={cartItems}
+                  setCartItems={setCartItems}
+                  key={item.id}
+                />
               ))}
             </div>
 
