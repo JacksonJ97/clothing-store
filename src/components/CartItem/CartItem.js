@@ -36,16 +36,16 @@ const Wrapper = styled.div`
   }
 `;
 
-const CartItem = ({ id, name, img, price, quantity, cartItems, setCartItems }) => {
+const CartItem = ({ id, name, img, price, quantity, total, cartItems, setCartItems }) => {
   return (
     <Wrapper>
       <img src={img} alt={name} />
       <div className="cart-details">
         <div>
           <h2>{name}</h2>
-          <p>{price}</p>
+          <p>${price}</p>
         </div>
-        <p className="product-total">Total</p>
+        <p className="product-total">Total: ${total}</p>
         <div className="quantity-container">
           <QuantityControl id={id} quantity={quantity} cartItems={cartItems} setCartItems={setCartItems} />
         </div>

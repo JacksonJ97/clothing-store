@@ -11,7 +11,7 @@ const AddToCart = ({ item, setCartItems }) => {
       if (prevState.find((element) => element.id === item.id)) {
         let newCartItems = prevState.map((element) => {
           if (element.id === item.id) {
-            return { ...element, quantity: element.quantity + 1 };
+            return { ...element, quantity: element.quantity + 1, total: (element.quantity + 1) * element.price };
           }
           return element;
         });

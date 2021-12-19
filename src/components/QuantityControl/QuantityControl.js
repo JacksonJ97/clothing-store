@@ -16,6 +16,7 @@ const Wrapper = styled.div`
     }
   }
 `;
+
 const QuantityControl = ({ id, quantity, cartItems, setCartItems }) => {
   const decrementQuantity = () => {
     const item = cartItems.find((element) => element.id === id);
@@ -27,7 +28,7 @@ const QuantityControl = ({ id, quantity, cartItems, setCartItems }) => {
     setCartItems((prevState) => {
       let newCartItems = prevState.map((element) => {
         if (element.id === id) {
-          return { ...element, quantity: element.quantity - 1 };
+          return { ...element, quantity: element.quantity - 1, total: (element.quantity - 1) * element.price };
         }
         return element;
       });
@@ -40,12 +41,18 @@ const QuantityControl = ({ id, quantity, cartItems, setCartItems }) => {
     setCartItems((prevState) => {
       let newCartItems = prevState.map((element) => {
         if (element.id === id) {
-          return { ...element, quantity: element.quantity + 1 };
+          return { ...element, quantity: element.quantity + 1, total: (element.quantity + 1) * element.price };
         }
         return element;
       });
 
       return newCartItems;
+    });
+  };
+
+  const removeItem = () => {
+    setCartItems((prevState) => {
+      return prevState.filter((element) => element.id !== id);
     });
   };
 
@@ -56,7 +63,7 @@ const QuantityControl = ({ id, quantity, cartItems, setCartItems }) => {
         <p>{quantity}</p>
         <button onClick={incrementQuantity}>+</button>
       </div>
-      <div>Remove Item</div>
+      <button onClick={removeItem}>Remove Item</button>
     </Wrapper>
   );
 };

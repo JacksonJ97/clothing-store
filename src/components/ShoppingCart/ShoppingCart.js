@@ -67,6 +67,7 @@ const ShoppingCart = ({ cartItems, setCartItems, showCart, setShowCart }) => {
                   price={item.price}
                   img={item.img}
                   quantity={item.quantity}
+                  total={item.total}
                   cartItems={cartItems}
                   setCartItems={setCartItems}
                   key={item.id}
