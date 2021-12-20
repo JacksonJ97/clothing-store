@@ -11,6 +11,7 @@ const Wrapper = styled.div`
     cursor: pointer;
   }
 `;
+
 const CartHeader = ({ setShowCart }) => {
   return (
     <Wrapper>

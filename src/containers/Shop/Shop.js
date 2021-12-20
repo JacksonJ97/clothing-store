@@ -10,7 +10,7 @@ const Wrapper = styled.main`
   display: grid;
   grid-template-columns: 15% repeat(2, 1fr);
   grid-template-rows: 50px 50px 1fr;
-  padding: 2em 5%;
+  padding: 0 5% 2em 5%;
 
   .breadcrumb {
     grid-column: 1 / 4;
