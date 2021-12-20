@@ -18,11 +18,11 @@ const Background = styled.div`
 
 const Cart = styled.div`
   background-color: white;
-  border: 1px solid #202020;
   width: 450px;
   padding: 2em;
+  overflow: auto;
 
-  .shopping-cart-header {
+  .cart-header {
     display: flex;
     justify-content: space-between;
   }
@@ -35,11 +35,36 @@ const Cart = styled.div`
   .cart-items-container {
     margin: 2em 0;
   }
+
+  .checkout-btn {
+    width: 100%;
+    padding: 1em;
+    margin: 2em 0;
+    border-radius: 6px;
+    border: 1px solid #202020;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+
+  .empty-cart-container {
+    margin: 2em 0;
+
+    button {
+      width: 100%;
+      padding: 1em;
+      margin: 2em 0;
+      border-radius: 6px;
+      border: 1px solid #202020;
+      background-color: #ffffff;
+      cursor: pointer;
+    }
+  }
 `;
 
 const ShoppingCart = ({ cartItems, setCartItems, showCart, setShowCart }) => {
   const backgroundRef = useRef();
   const navigate = useNavigate();
+  const subtotal = cartItems.reduce((total, item) => item.total + total, 0);
 
   const closeCart = (e) => {
     if (backgroundRef.current === e.target) {
@@ -48,17 +73,15 @@ const ShoppingCart = ({ cartItems, setCartItems, showCart, setShowCart }) => {
   };
 
   const openCheckoutMessage = () => {
-    alert("Thank you for shopping");
+    alert("Thank you for shopping!");
   };
-
-  const subtotal = cartItems.reduce((total, item) => item.total + total, 0);
 
   return (
     <>
       {showCart && (
         <Background ref={backgroundRef} onClick={closeCart}>
           <Cart>
-            <div className="shopping-cart-header">
+            <div className="cart-header">
               <h1>
                 Your <br />
                 Shopping <br />
@@ -71,24 +94,16 @@ const ShoppingCart = ({ cartItems, setCartItems, showCart, setShowCart }) => {
               <>
                 <div className="cart-items-container">
                   {cartItems.map((item) => (
-                    <CartItem
-                      id={item.id}
-                      name={item.name}
-                      price={item.price}
-                      img={item.img}
-                      quantity={item.quantity}
-                      total={item.total}
-                      cartItems={cartItems}
-                      setCartItems={setCartItems}
-                      key={item.id}
-                    />
+                    <CartItem item={item} cartItems={cartItems} setCartItems={setCartItems} key={item.id} />
                   ))}
                 </div>
-                <p>Subtotal: ${subtotal}</p>
-                <button onClick={openCheckoutMessage}>Checkout</button>
+                <h2>Subtotal: ${subtotal}</h2>
+                <button className="checkout-btn" onClick={openCheckoutMessage}>
+                  Checkout
+                </button>
               </>
             ) : (
-              <div>
+              <div className="empty-cart-container">
                 <p>Your cart is empty.</p>
                 <button
                   onClick={() => {

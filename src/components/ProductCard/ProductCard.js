@@ -62,7 +62,7 @@ const ProductCard = ({ img, name, price, id, path }) => {
         </Link>
 
         <div className="wrapper">
-          <p>{price}</p>
+          <p>${price}</p>
           <Link to={`/shop/${path}/${id}`} className="shopping-cart">
             <IoBagOutline />
           </Link>

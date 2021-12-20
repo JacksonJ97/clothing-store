@@ -15,7 +15,7 @@ const Wrapper = styled.main`
 
   button {
     display: block;
-    margin: 2em auto;
+    margin: 2em 0;
     padding: 1em 2em;
     font-size: clamp(0.875rem, 1.25vw, 1rem);
     border: 1px solid #202020;

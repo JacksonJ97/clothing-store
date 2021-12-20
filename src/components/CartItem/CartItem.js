@@ -18,9 +18,10 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 12px;
     width: 100%;
 
-    h2 {
+    h3 {
       font-size: 1rem;
       margin-bottom: 0.25em;
     }
@@ -36,18 +37,18 @@ const Wrapper = styled.div`
   }
 `;
 
-const CartItem = ({ id, name, img, price, quantity, total, cartItems, setCartItems }) => {
+const CartItem = ({ item, cartItems, setCartItems }) => {
   return (
     <Wrapper>
-      <img src={img} alt={name} />
+      <img src={item.img} alt={item.name} />
       <div className="cart-details">
         <div>
-          <h2>{name}</h2>
-          <p>${price}</p>
+          <h3>{item.name}</h3>
+          <p>${item.price}</p>
         </div>
-        <p className="product-total">Total: ${total}</p>
+        <p className="product-total">Total: ${item.total}</p>
         <div className="quantity-container">
-          <QuantityControl id={id} quantity={quantity} cartItems={cartItems} setCartItems={setCartItems} />
+          <QuantityControl id={item.id} quantity={item.quantity} cartItems={cartItems} setCartItems={setCartItems} />
         </div>
       </div>
     </Wrapper>

@@ -24,14 +24,9 @@ const Wrapper = styled.main`
     grid-row: 3 / 4;
   }
 
-  .price-sort {
-    grid-column: 2 / 4;
-    grid-row: 2 / 3;
-  }
-
   .product-card-grid {
     grid-column: 2 / 4;
-    grid-row: 3 / 4;
+    grid-row: 2 / 4;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -50,7 +45,6 @@ const Shop = () => {
       <div className="product-category">
         <ProductCategory />
       </div>
-      <div className="price-sort">Price Sort Menu</div>
       <div className="product-card-grid">
         <Outlet />
       </div>

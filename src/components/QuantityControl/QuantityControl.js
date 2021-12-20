@@ -1,9 +1,13 @@
 import styled from "styled-components";
+import { BiPlus, BiMinus } from "react-icons/bi";
 
 // Styles
 const Wrapper = styled.div`
   button {
+    background: none;
+    border: none;
     padding: 0.25em;
+    cursor: pointer;
   }
 
   .quality-container {
@@ -13,7 +17,19 @@ const Wrapper = styled.div`
 
     p {
       margin: 0 1em;
+      padding: 0.25em 0.75em;
+      border: 1px solid #202020;
     }
+  }
+
+  .remove-item-btn {
+    display: block;
+    font-size: 0.625rem;
+    margin: 0 auto;
+  }
+
+  .remove-item-btn:hover {
+    text-decoration: underline;
   }
 `;
 
@@ -59,11 +75,17 @@ const QuantityControl = ({ id, quantity, cartItems, setCartItems }) => {
   return (
     <Wrapper>
       <div className="quality-container">
-        <button onClick={decrementQuantity}>-</button>
+        <button onClick={decrementQuantity}>
+          <BiMinus />
+        </button>
         <p>{quantity}</p>
-        <button onClick={incrementQuantity}>+</button>
+        <button onClick={incrementQuantity}>
+          <BiPlus />
+        </button>
       </div>
-      <button onClick={removeItem}>Remove Item</button>
+      <button className="remove-item-btn" onClick={removeItem}>
+        Remove Item
+      </button>
     </Wrapper>
   );
 };
