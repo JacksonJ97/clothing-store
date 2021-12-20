@@ -7,7 +7,7 @@ import QuantityControl from "../QuantityControl/QuantityControl";
 const Wrapper = styled.div`
   display: flex;
   column-gap: 12px;
-  margin-bottom: 2em;
+  margin: 2em 0;
 
   img {
     height: 100px;

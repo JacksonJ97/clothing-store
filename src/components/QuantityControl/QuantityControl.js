@@ -15,10 +15,15 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
 
+    svg {
+      font-size: 1.25rem;
+    }
+
     p {
       margin: 0 1em;
       padding: 0.25em 0.75em;
       border: 1px solid #202020;
+      user-select: none;
     }
   }
 
