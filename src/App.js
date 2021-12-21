@@ -9,7 +9,7 @@ import Home from "./containers/Home/Home";
 import Shop from "./containers/Shop/Shop";
 import ProductDetail from "./containers/ProductDetail/ProductDetail";
 import ProductCardGrid from "./components/ProductCardGrid/ProductCardGrid";
-import Contact from "./containers/Contact/Contact";
+import About from "./containers/About/About";
 
 // Global Styles
 import GlobalStyle from "./theme/GlobalStyle";
@@ -37,7 +37,7 @@ const App = () => {
           <Route path=":filter" element={<ProductCardGrid />} />
         </Route>
         <Route path="/shop/:filter/:productId" element={<ProductDetail cartItems={cartItems} setCartItems={setCartItems} />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Wrapper>
   );

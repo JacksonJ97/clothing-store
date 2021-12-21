@@ -33,14 +33,15 @@ const Wrapper = styled.header`
     }
   }
 
-  /* @media (max-width: 400px) {
-    height: 86px;
-    img {
-      width: 48px;
-      height: 48px;
-    }
+  @media (max-width: 400px) {
     flex-direction: column;
-  } */
+    justify-content: flex-start;
+    gap: 12px;
+
+    img {
+      display: none;
+    }
+  }
 `;
 
 const Header = ({ cartItems, setShowCart }) => {

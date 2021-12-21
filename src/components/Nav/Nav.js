@@ -29,8 +29,8 @@ const Nav = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/contact">
-            Contact
+          <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/about">
+            About Us
           </NavLink>
         </li>
       </ul>
