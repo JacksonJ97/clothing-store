@@ -4,7 +4,7 @@ import { IoBagOutline } from "react-icons/io5";
 
 // Styles
 const Wrapper = styled.div`
-  max-width: 350px;
+  max-width: 360px;
   box-shadow: 2px 2px 18px 0px rgba(0, 0, 0, 0.1);
 
   .image-container {
