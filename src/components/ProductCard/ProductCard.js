@@ -5,12 +5,14 @@ import { IoBagOutline } from "react-icons/io5";
 // Styles
 const Wrapper = styled.div`
   max-width: 350px;
-  border-radius: 6px;
   box-shadow: 2px 2px 18px 0px rgba(0, 0, 0, 0.1);
 
   .image-container {
-    background-color: #f1f1f1;
+    background-color: #efefe7;
     border-radius: 6px 6px 0 0;
+    border-top: 1px solid #202020;
+    border-left: 1px solid #202020;
+    border-right: 1px solid #202020;
   }
 
   img {
@@ -22,6 +24,11 @@ const Wrapper = styled.div`
   }
 
   .product-details {
+    border-radius: 0 0 6px 6px;
+    border-bottom: 1px solid #202020;
+    border-left: 1px solid #202020;
+    border-right: 1px solid #202020;
+    background-color: #efefe7;
     padding: 1em;
   }
 

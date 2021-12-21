@@ -32,6 +32,15 @@ const Wrapper = styled.header`
       margin-left: 0.25em;
     }
   }
+
+  /* @media (max-width: 400px) {
+    height: 86px;
+    img {
+      width: 48px;
+      height: 48px;
+    }
+    flex-direction: column;
+  } */
 `;
 
 const Header = ({ cartItems, setShowCart }) => {

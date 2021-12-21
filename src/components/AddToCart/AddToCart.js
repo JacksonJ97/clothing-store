@@ -3,11 +3,15 @@ import styled from "styled-components";
 // Styles
 const Button = styled.button`
   font-size: 1rem;
-  background: none;
+  background-color: #ffffff;
   border: 1px solid #202020;
   border-radius: 6px;
   padding: 0.75em;
   cursor: pointer;
+
+  :hover {
+    background-color: #efefe7;
+  }
 `;
 
 const AddToCart = ({ item, setCartItems }) => {

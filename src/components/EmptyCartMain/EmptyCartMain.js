@@ -15,6 +15,10 @@ const Wrapper = styled.div`
     background-color: #ffffff;
     cursor: pointer;
   }
+
+  button:hover {
+    background-color: #efefe7;
+  }
 `;
 
 const EmptyCartMain = ({ setShowCart }) => {

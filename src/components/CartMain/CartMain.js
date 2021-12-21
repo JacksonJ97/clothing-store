@@ -15,6 +15,10 @@ const Wrapper = styled.div`
     background-color: #ffffff;
     cursor: pointer;
   }
+
+  .checkout-btn:hover {
+    background-color: #efefe7;
+  }
 `;
 
 const CartMain = ({ cartItems, setCartItems }) => {

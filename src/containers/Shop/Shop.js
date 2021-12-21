@@ -14,6 +14,7 @@ const Wrapper = styled.main`
 
   .breadcrumb {
     grid-column: 1 / 4;
+    align-self: center;
   }
 
   .products-title {

@@ -14,6 +14,7 @@ const Wrapper = styled.nav`
 
 const Nav = () => {
   const activeStyle = { borderBottom: "1px solid #202020" };
+
   return (
     <Wrapper>
       <ul>

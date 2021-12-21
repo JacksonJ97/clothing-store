@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   align-items: center;
 
   a {
-    color: #8a8a8a;
+    color: #888881;
   }
 
   a:hover {
