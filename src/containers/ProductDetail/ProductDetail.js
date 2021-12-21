@@ -13,7 +13,7 @@ import productData from "../../productData";
 const Wrapper = styled.main`
   display: grid;
   grid-template-rows: 50px 50px 1fr;
-  padding: 2em 5%;
+  padding: 0 5% 2em 5%;
 
   .back-button {
     font-size: 2.25rem;

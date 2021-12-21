@@ -2,7 +2,12 @@ import styled from "styled-components";
 
 // Styles
 const Button = styled.button`
-  padding: 1em;
+  font-size: 1rem;
+  background: none;
+  border: 1px solid #202020;
+  border-radius: 6px;
+  padding: 0.75em;
+  cursor: pointer;
 `;
 
 const AddToCart = ({ item, setCartItems }) => {

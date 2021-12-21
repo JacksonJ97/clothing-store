@@ -13,6 +13,11 @@ const Wrapper = styled.div`
     height: auto;
   }
 
+  p {
+    margin: 1.5em auto;
+    max-width: 420px;
+  }
+
   .details {
     margin-top: 2em;
   }
@@ -47,7 +52,7 @@ const Product = ({ product, setCartItems }) => {
       <img src={product.img} alt={product.name} />
       <div className="details">
         <h1>{product.name}</h1>
-        <p>${product.price}</p>
+        <h2>${product.price}</h2>
         <p>{product.description}</p>
         <AddToCart item={item} setCartItems={setCartItems} />
       </div>

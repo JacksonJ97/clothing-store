@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Logo from "../../assets/images/hm-icon.png";
+import { Link } from "react-router-dom";
 import { IoBagOutline } from "react-icons/io5";
 
 // Components
@@ -9,8 +11,13 @@ const Wrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2em 5%;
+  padding: 0 5%;
   position: relative;
+
+  img {
+    width: 64px;
+    height: 64px;
+  }
 
   .shopping-cart-icon {
     display: flex;
@@ -19,6 +26,7 @@ const Wrapper = styled.header`
     background: none;
     border: none;
     cursor: pointer;
+
     p {
       font-size: 0.875rem;
       margin-left: 0.25em;
@@ -31,7 +39,9 @@ const Header = ({ cartItems, setShowCart }) => {
 
   return (
     <Wrapper>
-      <div>Logo</div>
+      <Link to="/">
+        <img src={Logo} alt="Logo" />
+      </Link>
       <Nav />
       <button className="shopping-cart-icon" onClick={() => setShowCart((prevState) => !prevState)}>
         <IoBagOutline /> <p>( {totalQuantity} )</p>

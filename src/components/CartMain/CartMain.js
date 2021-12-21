@@ -6,9 +6,10 @@ import CartItem from "../CartItem/CartItem";
 // Styles
 const Wrapper = styled.div`
   .checkout-btn {
+    font-size: 1rem;
     width: 100%;
-    padding: 1em;
-    margin: 2em 0;
+    padding: 0.75em;
+    margin: 1.5em 0;
     border-radius: 6px;
     border: 1px solid #202020;
     background-color: #ffffff;

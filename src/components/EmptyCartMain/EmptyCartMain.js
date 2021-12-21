@@ -6,9 +6,10 @@ const Wrapper = styled.div`
   margin: 2em 0;
 
   button {
+    font-size: 1rem;
     width: 100%;
-    padding: 1em;
-    margin: 2em 0;
+    padding: 0.75em;
+    margin: 1.5em 0;
     border-radius: 6px;
     border: 1px solid #202020;
     background-color: #ffffff;

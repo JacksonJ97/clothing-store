@@ -28,7 +28,6 @@ const Wrapper = styled.div`
   .product-name {
     display: inline;
     font-size: 1.25rem;
-    margin-bottom: 0.25em;
     border-bottom: 1px solid transparent;
   }
 
@@ -40,6 +39,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 0.25em;
   }
 
   .shopping-cart {
