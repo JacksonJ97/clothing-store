@@ -16,7 +16,7 @@ const Wrapper = styled.main`
   background-position: center right 40%;
 
   h1 {
-    color: #ffffff;
+    color: #efefe7;
   }
 
   .details {
@@ -32,14 +32,14 @@ const Wrapper = styled.main`
     margin: 2em auto 0 auto;
     padding: 1em 2em;
     font-size: clamp(0.875rem, 1.25vw, 1rem);
-    background-color: #ffffff;
+    background-color: #efefe7;
     border: 1px solid #202020;
     border-radius: 6px;
     cursor: pointer;
   }
 
   button:hover {
-    background-color: #efefe7;
+    background-color: #ffffff;
   }
 
   @media (min-width: 700px) {

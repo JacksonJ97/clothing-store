@@ -26,6 +26,7 @@ const Wrapper = styled.main`
     color: #efefe7;
     max-width: 560px;
     margin: 0 auto 32px auto;
+    line-height: 1.5;
   }
 
   @media (min-width: 1500px) {

@@ -4,7 +4,8 @@ import { IoBagOutline } from "react-icons/io5";
 
 // Styles
 const Wrapper = styled.div`
-  max-width: 360px;
+  width: 360px;
+  height: 370px;
   box-shadow: 2px 2px 18px 0px rgba(0, 0, 0, 0.1);
 
   .image-container {
@@ -17,8 +18,8 @@ const Wrapper = styled.div`
 
   img {
     display: block;
-    width: 70%;
-    height: 80%;
+    width: 250px;
+    height: 290px;
     padding: 1.25em 0;
     margin: 0 auto;
   }
@@ -51,6 +52,14 @@ const Wrapper = styled.div`
 
   .shopping-cart {
     font-size: 1.25rem;
+  }
+
+  @media (max-width: 450px) {
+    width: 90%;
+
+    img {
+      width: 70%;
+    }
   }
 `;
 

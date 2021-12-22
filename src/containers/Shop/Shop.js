@@ -62,7 +62,15 @@ const Wrapper = styled.main`
     .product-card-grid {
       grid-column: 1 / 2;
       grid-row: 4 / 5;
-      grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+  }
+
+  @media (max-width: 320px) {
+    padding: 0 0 2em 0;
+
+    .breadcrumb {
+      margin-left: 1em;
     }
   }
 `;
