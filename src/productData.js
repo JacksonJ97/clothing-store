@@ -17,6 +17,12 @@ import nikePantsImg from "./assets/images/nike-pants.png";
 import adidasPantsImg from "./assets/images/adidas-pants.png";
 import greenPantsImg from "./assets/images/green-pants.png";
 import underArmourPantsImg from "./assets/images/under-armour-pants.png";
+import leatherJacketImg from "./assets/images/leather-jacket.png";
+import greenJacketImg from "./assets/images/green-jacket.png";
+import lightGreenJacketImg from "./assets/images/light-green-jacket.png";
+import grayJacketImg from "./assets/images/gray-jacket.png";
+import redJacketImg from "./assets/images/red-jacket.png";
+import blueJacketImg from "./assets/images/blue-jacket.png";
 
 const productData = {
   hoodies: [
@@ -172,48 +178,48 @@ const productData = {
   "jackets&coats": [
     {
       id: uniqueId("4"),
-      img: greyHoodieImg,
-      name: "Grey Hoodie",
+      img: leatherJacketImg,
+      name: "Leather Jacket",
       price: 20,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat tempus laoreet. Suspendisse dignissim odio ac nisi consequat lacinia. Fusce posuere a augue sed venenatis.",
     },
     {
       id: uniqueId("4"),
-      img: greyHoodieImg,
-      name: "Grey Hoodie",
+      img: greenJacketImg,
+      name: "Green Jacket",
       price: 25,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat tempus laoreet. Suspendisse dignissim odio ac nisi consequat lacinia. Fusce posuere a augue sed venenatis.",
     },
     {
       id: uniqueId("4"),
-      img: greyHoodieImg,
-      name: "Grey Hoodie",
+      img: lightGreenJacketImg,
+      name: "Light Green Jacket",
       price: 30,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat tempus laoreet. Suspendisse dignissim odio ac nisi consequat lacinia. Fusce posuere a augue sed venenatis.",
     },
     {
       id: uniqueId("4"),
-      img: greyHoodieImg,
-      name: "Grey Hoodie",
+      img: grayJacketImg,
+      name: "Gray Jacket",
       price: 35,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat tempus laoreet. Suspendisse dignissim odio ac nisi consequat lacinia. Fusce posuere a augue sed venenatis.",
     },
     {
       id: uniqueId("4"),
-      img: greyHoodieImg,
-      name: "Grey Hoodie",
+      img: redJacketImg,
+      name: "Red Jacket",
       price: 15,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat tempus laoreet. Suspendisse dignissim odio ac nisi consequat lacinia. Fusce posuere a augue sed venenatis.",
     },
     {
       id: uniqueId("4"),
-      img: greyHoodieImg,
-      name: "Grey Hoodie",
+      img: blueJacketImg,
+      name: "Blue Jacket",
       price: 20,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat tempus laoreet. Suspendisse dignissim odio ac nisi consequat lacinia. Fusce posuere a augue sed venenatis.",
