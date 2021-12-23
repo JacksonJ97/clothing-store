@@ -22,13 +22,13 @@ const Wrapper = styled.header`
   .shopping-cart-icon {
     display: flex;
     align-items: center;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     background: none;
     border: none;
     cursor: pointer;
 
     p {
-      font-size: 0.875rem;
+      font-size: 1.25rem;
       margin-left: 0.25em;
     }
   }
