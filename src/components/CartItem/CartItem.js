@@ -20,6 +20,7 @@ const Wrapper = styled.div`
     grid-template-rows: 1fr 1fr;
     gap: 12px;
     width: 100%;
+    max-width: 257px;
 
     h3 {
       font-size: 1rem;

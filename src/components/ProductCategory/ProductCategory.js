@@ -41,8 +41,8 @@ const ProductCategory = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/shop/jeans">
-          Jeans
+        <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/shop/jeans&pants">
+          Jeans {"&"} Pants
         </NavLink>
       </li>
       <li>

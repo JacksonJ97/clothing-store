@@ -11,6 +11,12 @@ import blueSweaterImg from "./assets/images/blue-sweater.png";
 import graySweaterImg from "./assets/images/gray-sweater.png";
 import redSweaterImg from "./assets/images/red-sweater.png";
 import blackSweaterImg from "./assets/images/black-sweater.png";
+import blackJeansImg from "./assets/images/black-jeans.png";
+import blackPantsImg from "./assets/images/black-pants.png";
+import nikePantsImg from "./assets/images/nike-pants.png";
+import adidasPantsImg from "./assets/images/adidas-pants.png";
+import greenPantsImg from "./assets/images/green-pants.png";
+import underArmourPantsImg from "./assets/images/under-armour-pants.png";
 
 const productData = {
   hoodies: [
@@ -113,51 +119,51 @@ const productData = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat tempus laoreet. Suspendisse dignissim odio ac nisi consequat lacinia. Fusce posuere a augue sed venenatis.",
     },
   ],
-  jeans: [
+  "jeans&pants": [
     {
       id: uniqueId("3"),
-      img: blackHoodieImg,
-      name: "Black Hoodie",
+      img: blackJeansImg,
+      name: "Black Jeans",
       price: 20,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat tempus laoreet. Suspendisse dignissim odio ac nisi consequat lacinia. Fusce posuere a augue sed venenatis.",
     },
     {
       id: uniqueId("3"),
-      img: blackHoodieImg,
-      name: "Black Hoodie",
+      img: blackPantsImg,
+      name: "Black Pants",
       price: 25,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat tempus laoreet. Suspendisse dignissim odio ac nisi consequat lacinia. Fusce posuere a augue sed venenatis.",
     },
     {
       id: uniqueId("3"),
-      img: blackHoodieImg,
-      name: "Black Hoodie",
+      img: nikePantsImg,
+      name: "Nike Pants",
       price: 30,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat tempus laoreet. Suspendisse dignissim odio ac nisi consequat lacinia. Fusce posuere a augue sed venenatis.",
     },
     {
       id: uniqueId("3"),
-      img: blackHoodieImg,
-      name: "Black Hoodie",
+      img: adidasPantsImg,
+      name: "Adidas Pants",
       price: 35,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat tempus laoreet. Suspendisse dignissim odio ac nisi consequat lacinia. Fusce posuere a augue sed venenatis.",
     },
     {
       id: uniqueId("3"),
-      img: blackHoodieImg,
-      name: "Black Hoodie",
+      img: greenPantsImg,
+      name: "Green Pants",
       price: 15,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat tempus laoreet. Suspendisse dignissim odio ac nisi consequat lacinia. Fusce posuere a augue sed venenatis.",
     },
     {
       id: uniqueId("3"),
-      img: blackHoodieImg,
-      name: "Black Hoodie",
+      img: underArmourPantsImg,
+      name: "Under Armour Pants",
       price: 20,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat tempus laoreet. Suspendisse dignissim odio ac nisi consequat lacinia. Fusce posuere a augue sed venenatis.",
