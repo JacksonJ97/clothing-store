@@ -33,7 +33,7 @@ const Breadcrumb = () => {
     <Wrapper>
       <Link to="/">Home</Link>
       <RiArrowRightSLine />
-      <Link to="/shop">Catalog</Link>
+      <Link to="/catalog">Catalog</Link>
       {lastPath ? (
         <>
           <RiArrowRightSLine />

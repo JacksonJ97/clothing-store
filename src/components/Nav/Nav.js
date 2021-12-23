@@ -24,7 +24,7 @@ const Nav = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/shop">
+          <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/catalog">
             Catalog
           </NavLink>
         </li>

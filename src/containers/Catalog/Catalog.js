@@ -75,7 +75,7 @@ const Wrapper = styled.main`
   }
 `;
 
-const Shop = () => {
+const Catalog = () => {
   return (
     <Wrapper>
       <div className="breadcrumb">
@@ -92,4 +92,4 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+export default Catalog;

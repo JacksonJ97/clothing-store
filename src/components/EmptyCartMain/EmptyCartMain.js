@@ -25,7 +25,7 @@ const EmptyCartMain = ({ setShowCart }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/shop");
+    navigate("/catalog");
     setShowCart(false);
   };
 

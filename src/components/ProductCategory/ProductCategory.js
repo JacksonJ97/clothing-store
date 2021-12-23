@@ -26,27 +26,27 @@ const ProductCategory = () => {
       <li>
         <NavLink
           style={({ isActive }) => {
-            if (pathname === "/shop") {
+            if (pathname === "/catalog") {
               isActive = true;
             }
             return isActive ? activeStyle : undefined;
           }}
-          to="/shop/hoodies">
+          to="/catalog/hoodies">
           Hoodies
         </NavLink>
       </li>
       <li>
-        <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/shop/cardigans&sweaters">
+        <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/catalog/cardigans&sweaters">
           Cardigans {"&"} Sweaters
         </NavLink>
       </li>
       <li>
-        <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/shop/jeans&pants">
+        <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/catalog/jeans&pants">
           Jeans {"&"} Pants
         </NavLink>
       </li>
       <li>
-        <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/shop/jackets&coats">
+        <NavLink style={({ isActive }) => (isActive ? activeStyle : undefined)} to="/catalog/jackets&coats">
           Jackets {"&"} Coats
         </NavLink>
       </li>

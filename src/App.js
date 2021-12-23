@@ -6,7 +6,7 @@ import styled from "styled-components";
 import Header from "./containers/Header/Header";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 import Home from "./containers/Home/Home";
-import Shop from "./containers/Shop/Shop";
+import Catalog from "./containers/Catalog/Catalog";
 import ProductDetail from "./containers/ProductDetail/ProductDetail";
 import ProductCardGrid from "./components/ProductCardGrid/ProductCardGrid";
 import About from "./containers/About/About";
@@ -32,11 +32,11 @@ const App = () => {
       <ShoppingCart cartItems={cartItems} setCartItems={setCartItems} showCart={showCart} setShowCart={setShowCart} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />}>
+        <Route path="/catalog" element={<Catalog />}>
           <Route index element={<ProductCardGrid />} />
           <Route path=":filter" element={<ProductCardGrid />} />
         </Route>
-        <Route path="/shop/:filter/:productId" element={<ProductDetail cartItems={cartItems} setCartItems={setCartItems} />} />
+        <Route path="/catalog/:filter/:productId" element={<ProductDetail cartItems={cartItems} setCartItems={setCartItems} />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </Wrapper>

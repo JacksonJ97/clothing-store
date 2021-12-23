@@ -66,20 +66,20 @@ const Wrapper = styled.div`
 const ProductCard = ({ img, name, price, id, path }) => {
   return (
     <Wrapper>
-      <Link to={`/shop/${path}/${id}`}>
+      <Link to={`/catalog/${path}/${id}`}>
         <div className="image-container">
           <img src={img} alt={name} />
         </div>
       </Link>
 
       <div className="product-details">
-        <Link to={`/shop/${path}/${id}`}>
+        <Link to={`/catalog/${path}/${id}`}>
           <p className="product-name">{name}</p>
         </Link>
 
         <div className="wrapper">
           <p>${price}</p>
-          <Link to={`/shop/${path}/${id}`} className="shopping-cart">
+          <Link to={`/catalog/${path}/${id}`} className="shopping-cart">
             <IoBagOutline />
           </Link>
         </div>

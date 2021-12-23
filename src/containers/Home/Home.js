@@ -76,7 +76,7 @@ const Homepage = () => {
         <h1>
           Fall <br /> Collection <br /> 2022
         </h1>
-        <button onClick={() => navigate("/shop")}>Shop Now</button>
+        <button onClick={() => navigate("/catalog")}>Shop Now</button>
       </div>
     </Wrapper>
   );
