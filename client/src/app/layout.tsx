@@ -1,9 +1,16 @@
-import { Nunito_Sans } from "next/font/google";
+import { Sora, Manrope } from "next/font/google";
 import "./globals.css";
 
-const nunitoSans = Nunito_Sans({
-  variable: "--font-nunito-sans",
+const sora = Sora({
   subsets: ["latin"],
+  variable: "--font-sora",
+  fallback: ["Poppins", "Avenir", "Helvetica Neue", "Arial", "sans-serif"],
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  fallback: ["Inter", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
 });
 
 export default function RootLayout({
@@ -11,7 +18,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${nunitoSans.variable} antialiased`}>{children}</body>
+      <body className={`${manrope.variable} ${sora.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
