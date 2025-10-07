@@ -1,11 +1,20 @@
 import Link from "next/link";
 
-function FooterLinks({ links }: { links: { label: string; href: string }[] }) {
+function FooterLinks({
+  links,
+}: {
+  links: { label: string; href: string; isExternal: boolean }[];
+}) {
   return (
     <ul className="flex flex-col gap-0.5">
       {links.map((link) => (
         <li key={link.href}>
-          <Link href={link.href} className="text-xs uppercase hover:underline">
+          <Link
+            href={link.href}
+            target={link.isExternal ? "_blank" : undefined}
+            rel={link.isExternal ? "noopener noreferrer" : undefined}
+            className="text-xs uppercase hover:underline"
+          >
             {link.label}
           </Link>
         </li>
@@ -19,7 +28,7 @@ function FooterSection({
   links,
 }: {
   title: string;
-  links: { label: string; href: string }[];
+  links: { label: string; href: string; isExternal: boolean }[];
 }) {
   return (
     <div className="flex w-full flex-col gap-1">
@@ -34,32 +43,40 @@ export default function Footer() {
     {
       title: "Company",
       links: [
-        { label: "About", href: "/pages/about" },
-        { label: "Careers", href: "/pages/careers" },
-        { label: "FAQ", href: "/pages/faq" },
+        { label: "About", href: "/pages/about", isExternal: false },
+        { label: "Careers", href: "/pages/careers", isExternal: false },
+        { label: "FAQ", href: "/pages/faq", isExternal: false },
       ],
     },
     {
       title: "Policies",
       links: [
-        { label: "Privacy", href: "/pages/privacy" },
-        { label: "Terms & Conditions", href: "/pages/terms" },
-        { label: "Shipping & Returns", href: "/pages/shipping-returns" },
+        { label: "Privacy", href: "/pages/privacy", isExternal: false },
+        {
+          label: "Terms & Conditions",
+          href: "/pages/terms",
+          isExternal: false,
+        },
+        {
+          label: "Shipping & Returns",
+          href: "/pages/shipping-returns",
+          isExternal: false,
+        },
       ],
     },
     {
       title: "Follow Us",
       links: [
-        { label: "Instagram", href: "https://instagram.com" },
-        { label: "Facebook", href: "https://facebook.com" },
-        { label: "TikTok", href: "https://tiktok.com" },
-        { label: "X", href: "https://x.com" },
+        { label: "Instagram", href: "https://instagram.com", isExternal: true },
+        { label: "Facebook", href: "https://facebook.com", isExternal: true },
+        { label: "TikTok", href: "https://tiktok.com", isExternal: true },
+        { label: "X", href: "https://x.com", isExternal: true },
       ],
     },
   ];
 
   return (
-    <footer className="p-4.5 min-lg:px-6 min-lg:py-8">
+    <footer className="p-4.5 min-sm:pt-8 min-lg:px-6">
       <div className="flex flex-col gap-4 min-sm:flex-row min-sm:justify-between">
         {sections.map((section) => (
           <FooterSection
@@ -70,7 +87,7 @@ export default function Footer() {
         ))}
       </div>
 
-      <div className="mt-4 flex items-center gap-1.5 min-lg:mt-8">
+      <div className="mt-4.5 flex items-center gap-1.5 min-sm:mt-8">
         <p className="text-xs">© 2025 SORA, Inc.</p>
         <div className="text-sm">|</div>
         <Link
