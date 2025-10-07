@@ -3,11 +3,13 @@
 :root {
   --background-color: #ffffff;
   --foreground-color: #1a1a1a;
+  --off-white: #f7f6f3;
 }
 
 @theme {
   --color-background: var(--background-color);
   --color-foreground: var(--foreground-color);
+  --color-off-white: var(--off-white);
   --font-sora: var(--font-sora);
   --font-manrope: var(--font-manrope);
 }
