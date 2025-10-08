@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} ${sora.variable} antialiased`}>
-        {children}
+        <div className="isolate">{children}</div>
       </body>
     </html>
   );

@@ -15,6 +15,7 @@
 }
 
 body {
+  position: relative;
   background-color: var(--background-color);
   color: var(--foreground-color);
   font-family: var(--font-manrope);
