@@ -13,18 +13,15 @@ export default function Header() {
         SORA
       </Link>
 
-      <div className="flex w-full items-center justify-end gap-4">
+      <div className="flex w-full items-center justify-end gap-2">
         <button className="flex size-8 cursor-pointer items-center justify-center">
-          <Search strokeWidth={1.5} />
-        </button>
-        <button className="flex size-8 cursor-pointer items-center justify-center">
-          <Heart strokeWidth={1.5} />
+          <Search strokeWidth={1} />
         </button>
         <Link href="/auth" className="flex size-8 items-center justify-center">
-          <UserRound strokeWidth={1.5} />
+          <UserRound strokeWidth={1} />
         </Link>
         <button className="flex size-8 cursor-pointer items-center justify-center">
-          <ShoppingBag strokeWidth={1.5} />
+          <ShoppingBag strokeWidth={1} />
         </button>
       </div>
     </header>
