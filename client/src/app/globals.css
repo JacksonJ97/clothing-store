@@ -6,6 +6,12 @@
   --off-white: #f7f6f3;
 }
 
+@layer base {
+  html[data-base-ui-scroll-locked] {
+    scrollbar-gutter: auto !important;
+  }
+}
+
 @theme {
   --color-background: var(--background-color);
   --color-foreground: var(--foreground-color);
