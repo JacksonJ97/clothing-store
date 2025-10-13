@@ -50,7 +50,7 @@ function SheetContent({
       <Dialog.Popup
         data-slot="sheet-content"
         className={cn(
-          "bg-background fixed transition-transform duration-300 ease-in-out",
+          "bg-background fixed p-6 transition-transform duration-300 ease-in-out",
           side === "right" &&
             "inset-y-0 right-0 h-full w-xl data-closed:translate-x-full data-ending-style:translate-x-full data-open:translate-x-0 data-starting-style:translate-x-full",
           side === "left" &&
@@ -64,8 +64,8 @@ function SheetContent({
         {...props}
       >
         {children}
-        <Dialog.Close>
-          <X className="size-4" />
+        <Dialog.Close className="absolute top-4 right-4 flex size-8 cursor-pointer items-center justify-center">
+          <X className="size-6" strokeWidth={1} />
           <span className="sr-only">Close</span>
         </Dialog.Close>
       </Dialog.Popup>

@@ -1,23 +1,24 @@
-"use client";
-
+import Link from "next/link";
 import { Search } from "lucide-react";
-import {
-  Sheet,
-  SheetTrigger,
-  SheetContent,
-  SheetTitle,
-  SheetDescription,
-} from "@/components/Sheet";
+import Input from "@/components/Input";
+import { Sheet, SheetTrigger, SheetContent } from "@/components/Sheet";
 
-export default function SearchBar() {
+export default function SearchDrawer() {
   return (
     <Sheet>
       <SheetTrigger className="flex size-8 cursor-pointer items-center justify-center">
         <Search strokeWidth={1} />
       </SheetTrigger>
-      <SheetContent>
-        <SheetTitle>Sheet Title</SheetTitle>
-        <SheetDescription>Sheet Description</SheetDescription>
+      <SheetContent side="top">
+        <div className="mb-5 flex justify-center">
+          <Link href="/" className="text-2xl font-bold tracking-widest">
+            SORA
+          </Link>
+        </div>
+
+        <div className="mb-2 flex justify-center">
+          <Input placeholder="Search for..." className="max-w-2xl" />
+        </div>
       </SheetContent>
     </Sheet>
   );

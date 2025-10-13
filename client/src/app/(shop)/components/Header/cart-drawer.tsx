@@ -1,5 +1,3 @@
-"use client";
-
 import { ShoppingBag } from "lucide-react";
 import {
   Sheet,
@@ -9,7 +7,7 @@ import {
   SheetDescription,
 } from "@/components/Sheet";
 
-export default function Cart() {
+export default function CartDrawer() {
   return (
     <Sheet>
       <SheetTrigger className="flex size-8 cursor-pointer items-center justify-center">

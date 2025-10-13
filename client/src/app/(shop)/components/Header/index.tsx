@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { UserRound } from "lucide-react";
 import MobileDrawer from "@/app/(shop)/components/Header/mobile-drawer";
-import SearchBar from "@/app/(shop)/components/Header/search-drawer";
-import Cart from "@/app/(shop)/components/Header/cart-drawer";
+import SearchDrawer from "@/app/(shop)/components/Header/search-drawer";
+import CartDrawer from "@/app/(shop)/components/Header/cart-drawer";
 
 export default function Header() {
   return (
@@ -21,11 +21,11 @@ export default function Header() {
       </Link>
 
       <div className="flex w-full items-center justify-end gap-2">
-        <SearchBar />
+        <SearchDrawer />
         <Link href="/auth" className="flex size-8 items-center justify-center">
           <UserRound strokeWidth={1} />
         </Link>
-        <Cart />
+        <CartDrawer />
       </div>
     </header>
   );
