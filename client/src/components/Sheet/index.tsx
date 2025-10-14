@@ -28,7 +28,7 @@ function SheetBackdrop({
     <Dialog.Backdrop
       data-slot="sheet-backdrop"
       className={cn(
-        "fixed inset-0 min-h-dvh bg-black/25 transition-colors duration-300 data-ending-style:bg-black/0 data-starting-style:bg-black/0",
+        "fixed inset-0 min-h-dvh bg-black/60 transition-colors duration-300 data-ending-style:bg-black/0 data-starting-style:bg-black/0",
         className,
       )}
       {...props}

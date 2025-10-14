@@ -4,7 +4,6 @@ import {
   SheetTrigger,
   SheetContent,
   SheetTitle,
-  SheetDescription,
 } from "@/components/Sheet";
 
 export default function CartDrawer() {
@@ -14,8 +13,7 @@ export default function CartDrawer() {
         <ShoppingBag strokeWidth={1} />
       </SheetTrigger>
       <SheetContent>
-        <SheetTitle>Sheet Title</SheetTitle>
-        <SheetDescription>Sheet Description</SheetDescription>
+        <SheetTitle className="text-2xl">Your Cart</SheetTitle>
       </SheetContent>
     </Sheet>
   );
