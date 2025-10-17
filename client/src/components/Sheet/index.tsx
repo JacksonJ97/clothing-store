@@ -28,7 +28,7 @@ function SheetBackdrop({
     <Dialog.Backdrop
       data-slot="sheet-backdrop"
       className={cn(
-        "fixed inset-0 min-h-dvh bg-black/60 transition-colors duration-300 data-ending-style:bg-black/0 data-starting-style:bg-black/0",
+        "fixed inset-0 z-50 bg-black/25 transition-colors duration-300 data-ending-style:bg-black/0 data-starting-style:bg-black/0",
         className,
       )}
       {...props}
@@ -50,15 +50,15 @@ function SheetContent({
       <Dialog.Popup
         data-slot="sheet-content"
         className={cn(
-          "bg-background fixed p-6 transition-transform duration-300 ease-in-out",
+          "bg-background fixed z-50 p-6 transition-transform duration-300 ease-in-out",
           side === "right" &&
-            "inset-y-0 right-0 h-full w-xl data-closed:translate-x-full data-ending-style:translate-x-full data-open:translate-x-0 data-starting-style:translate-x-full",
+            "inset-y-0 right-0 h-full w-xl data-ending-style:translate-x-full data-starting-style:translate-x-full",
           side === "left" &&
-            "inset-y-0 left-0 h-full w-xl data-closed:-translate-x-full data-ending-style:-translate-x-full data-open:translate-x-0 data-starting-style:-translate-x-full",
+            "inset-y-0 left-0 h-full w-xl data-ending-style:-translate-x-full data-starting-style:-translate-x-full",
           side === "top" &&
-            "inset-x-0 top-0 h-auto w-full data-closed:-translate-y-full data-ending-style:-translate-y-full data-open:translate-y-0 data-starting-style:-translate-y-full",
+            "inset-x-0 top-0 h-auto w-full data-ending-style:-translate-y-full data-starting-style:-translate-y-full",
           side === "bottom" &&
-            "inset-x-0 bottom-0 h-auto w-full data-closed:translate-y-full data-ending-style:translate-y-full data-open:translate-y-0 data-starting-style:translate-y-full",
+            "inset-x-0 bottom-0 h-auto w-full data-ending-style:translate-y-full data-starting-style:translate-y-full",
           className,
         )}
         {...props}

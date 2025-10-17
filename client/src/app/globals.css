@@ -6,12 +6,6 @@
   --off-white: #f7f6f3;
 }
 
-@layer base {
-  html[data-base-ui-scroll-locked] {
-    scrollbar-gutter: auto !important;
-  }
-}
-
 @theme {
   --color-background: var(--background-color);
   --color-foreground: var(--foreground-color);
@@ -20,9 +14,15 @@
   --font-manrope: var(--font-manrope);
 }
 
-body {
-  position: relative;
-  background-color: var(--background-color);
-  color: var(--foreground-color);
-  font-family: var(--font-manrope);
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    position: relative;
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    font-family: var(--font-manrope);
+  }
 }
