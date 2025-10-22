@@ -1,28 +1,67 @@
 import Link from "next/link";
 import { UserRound } from "lucide-react";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
+  NavigationMenuLink,
+  NavigationMenuPositioner,
+  NavigationMenuPopup,
+} from "@/components/NavigationMenu";
 import MobileDrawer from "@/app/(shop)/components/Header/mobile-drawer";
 import SearchDrawer from "@/app/(shop)/components/Header/search-drawer";
 import CartDrawer from "@/app/(shop)/components/Header/cart-drawer";
 
 export default function Header() {
   return (
-    <header className="bg-background sticky top-0 flex items-center gap-2 p-4.5 min-lg:px-6">
-      <div className="hidden w-full items-center gap-4 min-md:flex">
-        <Link
-          href="/collections/men"
-          className="text-sm font-semibold uppercase hover:underline"
-        >
-          Men
-        </Link>
-        <Link
-          href="/collections/women"
-          className="text-sm font-semibold uppercase hover:underline"
-        >
-          Women
-        </Link>
-      </div>
+    <header className="bg-background sticky top-0 flex items-center gap-2 p-4.5 lg:px-6">
+      <NavigationMenu className="hidden w-full md:block">
+        <NavigationMenuList className="flex items-center gap-4">
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Women</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <NavigationMenuLink
+                render={<Link href="/collections/men">Shop All</Link>}
+              />
+              <NavigationMenuLink
+                render={<Link href="/collections/men">Outerwear</Link>}
+              />
+              <NavigationMenuLink
+                render={<Link href="/collections/men">Tops</Link>}
+              />
+              <NavigationMenuLink
+                render={<Link href="/collections/men">Bottoms</Link>}
+              />
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
-      <div className="w-full min-md:hidden">
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Men</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <NavigationMenuLink
+                render={<Link href="/collections/women">Shop All</Link>}
+              />
+              <NavigationMenuLink
+                render={<Link href="/collections/women">Outerwear</Link>}
+              />
+              <NavigationMenuLink
+                render={<Link href="/collections/women">Tops</Link>}
+              />
+              <NavigationMenuLink
+                render={<Link href="/collections/women">Bottoms</Link>}
+              />
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+
+        <NavigationMenuPositioner sideOffset={21} className="w-screen">
+          <NavigationMenuPopup />
+        </NavigationMenuPositioner>
+      </NavigationMenu>
+
+      <div className="w-full md:hidden">
         <MobileDrawer />
       </div>
 
