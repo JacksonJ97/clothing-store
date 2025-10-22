@@ -66,8 +66,8 @@ function FooterSection({
 
 export default function Footer() {
   return (
-    <footer className="p-4.5 min-sm:pt-8 min-lg:px-6">
-      <div className="flex flex-col gap-4 min-sm:flex-row min-sm:justify-between">
+    <footer className="p-4.5 sm:pt-8 lg:px-6">
+      <div className="flex flex-col gap-4 sm:flex-row sm:justify-between">
         {sections.map((section) => (
           <FooterSection
             title={section.title}
@@ -77,7 +77,7 @@ export default function Footer() {
         ))}
       </div>
 
-      <div className="mt-4.5 flex items-center gap-1.5 min-sm:mt-8">
+      <div className="mt-4.5 flex items-center gap-1.5 sm:mt-8">
         <p className="text-xs">© 2025 SORA, Inc.</p>
         <div className="text-sm">|</div>
         <Link
