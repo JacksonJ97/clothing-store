@@ -18,8 +18,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${sora.variable} antialiased`}>
-        <div className="isolate">{children}</div>
+      <body
+        className={`${manrope.variable} ${sora.variable} isolate antialiased`}
+      >
+        {children}
       </body>
     </html>
   );

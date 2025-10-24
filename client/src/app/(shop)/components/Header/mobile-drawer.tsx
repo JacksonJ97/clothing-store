@@ -11,7 +11,7 @@ export default function MobileDrawer() {
   return (
     <Sheet>
       <SheetTrigger className="flex size-8 cursor-pointer items-center justify-center">
-        <Menu strokeWidth={1} />
+        <Menu strokeWidth={1.25} />
       </SheetTrigger>
       <SheetContent side="left" className="w-full">
         <SheetTitle>Sheet Title</SheetTitle>

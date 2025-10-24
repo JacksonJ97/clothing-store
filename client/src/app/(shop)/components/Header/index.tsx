@@ -23,7 +23,7 @@ export default function Header() {
       <div className="flex w-full items-center justify-end gap-2">
         <SearchDrawer />
         <Link href="/auth" className="flex size-8 items-center justify-center">
-          <UserRound strokeWidth={1} />
+          <UserRound strokeWidth={1.25} />
         </Link>
         <CartDrawer />
       </div>

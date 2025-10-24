@@ -7,7 +7,7 @@ export default function SearchDrawer() {
   return (
     <Sheet>
       <SheetTrigger className="flex size-8 cursor-pointer items-center justify-center">
-        <Search strokeWidth={1} />
+        <Search strokeWidth={1.25} />
       </SheetTrigger>
       <SheetContent side="top">
         <div className="flex justify-center">

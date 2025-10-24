@@ -10,7 +10,7 @@ export default function CartDrawer() {
   return (
     <Sheet>
       <SheetTrigger className="flex size-8 cursor-pointer items-center justify-center">
-        <ShoppingBag strokeWidth={1} />
+        <ShoppingBag strokeWidth={1.25} />
       </SheetTrigger>
       <SheetContent>
         <SheetTitle className="text-2xl">Your Cart</SheetTitle>
