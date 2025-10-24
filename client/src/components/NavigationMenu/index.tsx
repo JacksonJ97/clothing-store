@@ -58,10 +58,10 @@ function NavigationMenuContent({
       className={cn(
         "px-4.5 py-8 transition-[opacity,translate] lg:px-6",
         "data-ending-style:opacity-0 data-starting-style:opacity-0",
-        "data-starting-style:data-[activation-direction=left]:translate-x-[-50%]",
-        "data-ending-style:data-[activation-direction=left]:translate-x-[50%]",
-        "data-starting-style:data-[activation-direction=right]:translate-x-[50%]",
-        "data-ending-style:data-[activation-direction=right]:translate-x-[-50%]",
+        "data-starting-style:data-[activation-direction=left]:-translate-x-1/2",
+        "data-ending-style:data-[activation-direction=left]:translate-x-1/2",
+        "data-starting-style:data-[activation-direction=right]:translate-x-1/2",
+        "data-ending-style:data-[activation-direction=right]:-translate-x-1/2",
         className,
       )}
       {...props}

@@ -28,7 +28,7 @@ function SheetBackdrop({
     <Dialog.Backdrop
       data-slot="sheet-backdrop"
       className={cn(
-        "fixed inset-0 bg-black/25 transition-colors duration-300 data-ending-style:bg-black/0 data-starting-style:bg-black/0",
+        "fixed inset-0 bg-black/25 transition-[background-color] duration-300 data-ending-style:bg-black/0 data-starting-style:bg-black/0",
         className,
       )}
       {...props}
@@ -50,7 +50,7 @@ function SheetContent({
       <Dialog.Popup
         data-slot="sheet-content"
         className={cn(
-          "bg-background fixed p-6 transition-transform duration-300 ease-in-out",
+          "bg-background fixed p-6 transition-[translate] duration-300 ease-in-out",
           side === "right" &&
             "inset-y-0 right-0 h-full w-xl data-ending-style:translate-x-full data-starting-style:translate-x-full",
           side === "left" &&
