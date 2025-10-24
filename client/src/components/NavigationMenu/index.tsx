@@ -121,7 +121,6 @@ function NavigationMenuPopup({
 }
 
 function NavigationMenuLink({
-  className,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Link>) {
   return (
