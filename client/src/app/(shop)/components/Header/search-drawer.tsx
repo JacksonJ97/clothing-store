@@ -10,13 +10,13 @@ export default function SearchDrawer() {
         <Search strokeWidth={1.25} />
       </SheetTrigger>
       <SheetContent side="top">
-        <div className="flex justify-center">
+        <div className="mb-6 flex justify-center">
           <Link href="/" className="text-2xl font-bold tracking-widest">
             SORA
           </Link>
         </div>
 
-        <div className="mt-4 flex justify-center">
+        <div className="flex justify-center">
           <Input placeholder="Search for..." className="max-w-2xl" />
         </div>
       </SheetContent>
