@@ -34,6 +34,7 @@ export default function DesktopNavigationMenu({
                     {category.subcategories.map((subcategory) => (
                       <li key={subcategory.handle}>
                         <NavigationMenuLink
+                          closeOnClick
                           render={
                             <Link
                               href={buildCollectionUrl(

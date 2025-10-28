@@ -17,5 +17,5 @@ export function buildCollectionUrl(
   if (subcategoryHandle === "all") {
     return `/collections/${collectionHandle}/${categoryHandle}`;
   }
-  return `/collections/${collectionHandle}/${categoryHandle}?type=${subcategoryHandle}`;
+  return `/collections/${collectionHandle}/${categoryHandle}/${subcategoryHandle}`;
 }

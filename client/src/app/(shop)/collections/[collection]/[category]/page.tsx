@@ -1,7 +1,15 @@
-export default function MenCollectionPage() {
+export default async function CategoryPage({
+  params,
+}: {
+  params: Promise<{ collection: string; category: string }>;
+}) {
+  const { collection, category } = await params;
+
   return (
     <main className="p-4.5 lg:px-6">
-      <h2>List of all men's collection</h2>
+      <h2>
+        List of all {collection} - {category} products
+      </h2>
       <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         <p>Product 1</p>
         <p>Product 2</p>
