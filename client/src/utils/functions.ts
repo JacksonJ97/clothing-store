@@ -8,3 +8,14 @@ export function cn(...inputs: ClassValue[]) {
 export function cx(...inputs: ClassValue[]) {
   return clsx(inputs);
 }
+
+export function buildCollectionUrl(
+  collectionHandle: string,
+  categoryHandle: string,
+  subcategoryHandle: string,
+) {
+  if (subcategoryHandle === "all") {
+    return `/collections/${collectionHandle}/${categoryHandle}`;
+  }
+  return `/collections/${collectionHandle}/${categoryHandle}?type=${subcategoryHandle}`;
+}
