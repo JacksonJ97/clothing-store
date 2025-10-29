@@ -6,7 +6,7 @@ export default async function CategoryPage({
   const { collection, category } = await params;
 
   return (
-    <main className="p-4.5 lg:px-6">
+    <>
       <h2>
         List of all {collection} - {category} products
       </h2>
@@ -22,6 +22,6 @@ export default async function CategoryPage({
         <p>Product 9</p>
         <p>Product 10</p>
       </div>
-    </main>
+    </>
   );
 }

@@ -6,7 +6,7 @@ export default async function CollectionPage({
   const { collection } = await params;
 
   return (
-    <main className="p-4.5 lg:px-6">
+    <>
       <h2>List of all {collection} products</h2>
       <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         <p>Product 1</p>
@@ -20,6 +20,6 @@ export default async function CollectionPage({
         <p>Product 9</p>
         <p>Product 10</p>
       </div>
-    </main>
+    </>
   );
 }
