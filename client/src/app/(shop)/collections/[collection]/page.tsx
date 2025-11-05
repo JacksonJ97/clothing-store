@@ -1,8 +1,6 @@
 export default async function CollectionPage({
   params,
-}: {
-  params: Promise<{ collection: string }>;
-}) {
+}: PageProps<"/collections/[collection]">) {
   const { collection } = await params;
 
   return (

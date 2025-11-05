@@ -41,7 +41,7 @@ const collections: Collection[] = [
         handle: "tops",
         subcategories: [
           { title: "Shop All", handle: "all" },
-          { title: "T-Shirts", handle: "t-shirts" },
+          { title: "T-Shirts", handle: "tees" },
           { title: "Hoodies", handle: "hoodies" },
           { title: "Sweatshirts", handle: "sweatshirts" },
           { title: "Shirts & Blouses", handle: "shirts-and-blouses" },
@@ -78,7 +78,7 @@ const collections: Collection[] = [
         handle: "tops",
         subcategories: [
           { title: "Shop All", handle: "all" },
-          { title: "T-Shirts", handle: "t-shirts" },
+          { title: "T-Shirts", handle: "tees" },
           { title: "Hoodies", handle: "hoodies" },
           { title: "Sweatshirts", handle: "sweatshirts" },
           { title: "Shirts", handle: "shirts" },

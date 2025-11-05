@@ -1,8 +1,6 @@
 export default async function CategoryPage({
   params,
-}: {
-  params: Promise<{ collection: string; category: string }>;
-}) {
+}: PageProps<"/collections/[collection]/[category]">) {
   const { collection, category } = await params;
 
   return (

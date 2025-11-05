@@ -7,9 +7,7 @@ export const metadata: Metadata = {
   description: "A modern clothing store.",
 };
 
-export default function Layout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function Layout({ children }: LayoutProps<"/">) {
   return (
     <>
       <Header />
