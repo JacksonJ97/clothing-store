@@ -1,39 +1,29 @@
-import * as React from "react";
 import { NavigationMenu as NavigationMenuPrimitive } from "@base-ui-components/react/navigation-menu";
 import { cn } from "@/utils/functions";
 
-function NavigationMenu({
-  children,
-  ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Root>) {
+function NavigationMenu(props: NavigationMenuPrimitive.Root.Props) {
   return (
-    <NavigationMenuPrimitive.Root data-slot="navigation-menu" {...props}>
-      {children}
-    </NavigationMenuPrimitive.Root>
+    <NavigationMenuPrimitive.Root data-slot="navigation-menu" {...props} />
   );
 }
 
-function NavigationMenuList({
-  ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.List>) {
+function NavigationMenuList(props: NavigationMenuPrimitive.List.Props) {
   return (
     <NavigationMenuPrimitive.List data-slot="navigation-menu-list" {...props} />
   );
 }
 
-function NavigationMenuItem({
-  ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Item>) {
+function NavigationMenuItem(props: NavigationMenuPrimitive.Item.Props) {
   return (
     <NavigationMenuPrimitive.Item data-slot="navigation-menu-item" {...props} />
   );
 }
 
 function NavigationMenuTrigger({
-  className,
   children,
+  className,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Trigger>) {
+}: NavigationMenuPrimitive.Trigger.Props) {
   return (
     <NavigationMenuPrimitive.Trigger
       data-slot="navigation-menu-trigger"
@@ -51,7 +41,7 @@ function NavigationMenuTrigger({
 function NavigationMenuContent({
   className,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Content>) {
+}: NavigationMenuPrimitive.Content.Props) {
   return (
     <NavigationMenuPrimitive.Content
       data-slot="navigation-menu-content"
@@ -70,10 +60,10 @@ function NavigationMenuContent({
 }
 
 function NavigationMenuPositioner({
-  className,
   children,
+  className,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Positioner>) {
+}: NavigationMenuPrimitive.Positioner.Props) {
   return (
     <NavigationMenuPrimitive.Portal data-slot="navigation-menu-portal">
       <NavigationMenuPrimitive.Positioner
@@ -98,10 +88,10 @@ function NavigationMenuPositioner({
 }
 
 function NavigationMenuPopup({
-  className,
   children,
+  className,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Popup>) {
+}: NavigationMenuPrimitive.Popup.Props) {
   return (
     <NavigationMenuPrimitive.Popup
       data-slot="navigation-menu-popup"
@@ -120,9 +110,7 @@ function NavigationMenuPopup({
   );
 }
 
-function NavigationMenuLink({
-  ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Link>) {
+function NavigationMenuLink(props: NavigationMenuPrimitive.Link.Props) {
   return (
     <NavigationMenuPrimitive.Link data-slot="navigation-menu-link" {...props} />
   );

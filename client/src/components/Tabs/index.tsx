@@ -1,10 +1,7 @@
 import { Tabs as TabsPrimitive } from "@base-ui-components/react/tabs";
 import { cn } from "@/utils/functions";
 
-function Tabs({
-  className,
-  ...props
-}: React.ComponentProps<typeof TabsPrimitive.Root>) {
+function Tabs({ className, ...props }: TabsPrimitive.Root.Props) {
   return (
     <TabsPrimitive.Root
       data-slot="tabs"
@@ -14,10 +11,7 @@ function Tabs({
   );
 }
 
-function TabsList({
-  className,
-  ...props
-}: React.ComponentProps<typeof TabsPrimitive.List>) {
+function TabsList({ className, ...props }: TabsPrimitive.List.Props) {
   return (
     <TabsPrimitive.List
       data-slot="tabs-list"
@@ -27,15 +21,12 @@ function TabsList({
   );
 }
 
-function TabsTrigger({
-  className,
-  ...props
-}: React.ComponentProps<typeof TabsPrimitive.Tab>) {
+function TabsTrigger({ className, ...props }: TabsPrimitive.Tab.Props) {
   return (
     <TabsPrimitive.Tab
       data-slot="tabs-trigger"
       className={cn(
-        "border-border data-selected:border-foreground w-full cursor-pointer border-b p-2 font-medium uppercase",
+        "border-border data-active:border-foreground w-full cursor-pointer border-b p-2 font-medium uppercase",
         className,
       )}
       {...props}
@@ -43,10 +34,8 @@ function TabsTrigger({
   );
 }
 
-function TabsContent({
-  ...props
-}: React.ComponentProps<typeof TabsPrimitive.Panel>) {
-  return <TabsPrimitive.Panel data-slot="tabs-content" {...props} />;
+function TabsPanel(props: TabsPrimitive.Panel.Props) {
+  return <TabsPrimitive.Panel data-slot="tabs-panel" {...props} />;
 }
 
-export { Tabs, TabsList, TabsTrigger, TabsContent };
+export { Tabs, TabsList, TabsTrigger, TabsPanel };
