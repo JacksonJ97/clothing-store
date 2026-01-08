@@ -1,5 +1,5 @@
 import { X } from "lucide-react";
-import { Dialog as SheetPrimitive } from "@base-ui-components/react/dialog";
+import { Dialog as SheetPrimitive } from "@base-ui/react/dialog";
 import { cn } from "@/utils/functions";
 
 function Sheet(props: SheetPrimitive.Root.Props) {

@@ -1,5 +1,5 @@
 import { ChevronDown } from "lucide-react";
-import { Accordion as AccordionPrimitive } from "@base-ui-components/react";
+import { Accordion as AccordionPrimitive } from "@base-ui/react";
 import { cn } from "@/utils/functions";
 
 function Accordion(props: AccordionPrimitive.Root.Props) {

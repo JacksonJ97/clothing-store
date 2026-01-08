@@ -13,6 +13,7 @@ import type { Collection } from "@/app/(shop)/components/Header";
 
 // TODO: Close drawer on link click
 // TODO: Test out mobile UX on real device (make sure focus and touch interactions are intuitive)
+// TODO: Make the drawer scrollable if content overflows viewport height
 
 export default function MobileDrawer({
   collections,
@@ -34,14 +35,14 @@ export default function MobileDrawer({
         <Tabs>
           <TabsList>
             {collections.map((collection) => (
-              <TabsTrigger key={collection.handle}>
+              <TabsTrigger value={collection.handle} key={collection.handle}>
                 {collection.title}
               </TabsTrigger>
             ))}
           </TabsList>
 
           {collections.map((collection) => (
-            <TabsPanel key={collection.handle}>
+            <TabsPanel value={collection.handle} key={collection.handle}>
               <Accordion multiple>
                 {collection.categories.map((category) => (
                   <AccordionItem key={category.handle}>
