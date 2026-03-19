@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  --background-color: #ffffff;
+  --foreground-color: #1a1a1a;
+  --off-white: #f7f6f3;
+  --border-color: #e0dfdf;
+}
+
+@theme {
+  --color-background: var(--background-color);
+  --color-foreground: var(--foreground-color);
+  --color-off-white: var(--off-white);
+  --color-border: var(--border-color);
+  --font-sora: var(--font-sora);
+  --font-manrope: var(--font-manrope);
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    position: relative;
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    font-family: var(--font-manrope);
+  }
+}
